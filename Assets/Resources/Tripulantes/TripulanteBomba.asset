@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e11ba899c7f4e249abdb508a5a1e360, type: 3}
+  m_Name: TripulanteBomba
+  m_EditorClassIdentifier: 
+  nome: MisselTeleguiado
+  icone: {fileID: 0}
+  cooldown: 2
+  descricao: sla
+  missilPrefab: {fileID: 8053342427428182042, guid: 3146cf739c5f54845a6c06ba9d8c4ffd, type: 3}
