@@ -13363,7 +13363,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawner: {fileID: 969402262}
-  krakenPrefab: {fileID: 475140512048125898, guid: 7c4ddedd459f47a4084c5e17bae49dc0, type: 3}
+  krakenPrefab: {fileID: 3979159395177821778, guid: 1f7cfbd99fa0491439bcc0396f9dbbe6, type: 3}
   centroArena: {fileID: 615844268}
   playerMove: {fileID: 3901727587601558065}
   cameraFollow: {fileID: 5697005695717306640}
@@ -16039,7 +16039,7 @@ PrefabInstance:
       objectReference: {fileID: 615844268}
     - target: {fileID: 2640811112224837330, guid: c088f21111a56a94493d365ebe16d63b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 789
+      value: 172
       objectReference: {fileID: 0}
     - target: {fileID: 2640811112224837330, guid: c088f21111a56a94493d365ebe16d63b, type: 3}
       propertyPath: m_LocalPosition.y
@@ -16047,7 +16047,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2640811112224837330, guid: c088f21111a56a94493d365ebe16d63b, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -1190
+      value: 442
       objectReference: {fileID: 0}
     - target: {fileID: 2640811112224837330, guid: c088f21111a56a94493d365ebe16d63b, type: 3}
       propertyPath: m_LocalRotation.w
@@ -16163,7 +16163,7 @@ PrefabInstance:
       objectReference: {fileID: 1368083196}
     - target: {fileID: 5677032416753139363, guid: c088f21111a56a94493d365ebe16d63b, type: 3}
       propertyPath: xpAtual
-      value: 4
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5677032416753139363, guid: c088f21111a56a94493d365ebe16d63b, type: 3}
       propertyPath: nivelTexto

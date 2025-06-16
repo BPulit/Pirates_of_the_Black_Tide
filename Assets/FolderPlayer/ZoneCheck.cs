@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections;
 
 public class ZoneCheck : MonoBehaviour
 {
@@ -14,37 +15,57 @@ public class ZoneCheck : MonoBehaviour
     public PlayerMove playerMove;
     [SerializeField] private CameraFollow cameraFollow;
 
+    private bool nivelAtingido = false;
+    private bool bossAtivo = false;
+
+    void Start()
+    {
+        StartCoroutine(EsperarNivelDoJogador());
+    }
+
+    IEnumerator EsperarNivelDoJogador()
+    {
+        while (!nivelAtingido)
+        {
+            if (PlayerXpManage.instance.nivel >= 2)
+            {
+                nivelAtingido = true;
+                Debug.Log("Atingiu o nível 2! Inimigos comuns sumiram. Vá para o centro da arena.");
+
+                if (spawner != null)
+                {
+                    spawner.spawnAtivo = false;
+                    spawner.DestruirInimigosAtivos();
+                }
+            }
+
+            yield return new WaitForSeconds(1f);
+        }
+    }
+
     void OnTriggerEnter(Collider other)
     {
         if (!other.CompareTag("Player")) return;
+        if (!nivelAtingido || bossAtivo) return;
 
-        // Desativa spawn dos inimigos
-        if (spawner != null)
-        {
-            spawner.estaNoBoss = true;
-            spawner.spawnAtivo = false;
-            spawner.DestruirInimigosAtivos();
-        }
+        bossAtivo = true;
 
-        // Instancia o Kraken
         if (krakenInstanciado == null && krakenPrefab != null && centroArena != null)
         {
             krakenInstanciado = Instantiate(krakenPrefab, centroArena.position, Quaternion.identity);
-            cameraFollow.AtivarCameraBoss();
+            Debug.Log("Kraken instanciado!");
 
             AudioManager.Instance.TocarSomEfeito(3);
             AudioManager.Instance.TocarSomEfeito(4);
             AudioManager.Instance.TocarSomEfeito(5);
+
+            if (cameraFollow != null)
+                cameraFollow.AtivarCameraBoss();
         }
 
-        // Chama o método de ativar modo orbital no Player
         if (playerMove != null && centroArena != null)
         {
             playerMove.AtivarModoOrbital(centroArena);
-            
-
         }
     }
-
-
 }
