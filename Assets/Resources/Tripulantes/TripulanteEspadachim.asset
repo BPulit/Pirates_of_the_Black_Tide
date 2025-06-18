@@ -9,11 +9,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6e11ba899c7f4e249abdb508a5a1e360, type: 3}
-  m_Name: TripulanteBomba
+  m_Script: {fileID: 11500000, guid: 8d219a8fecda8b341b5df2d897b99d15, type: 3}
+  m_Name: TripulanteEspadachim
   m_EditorClassIdentifier: 
-  nome: MisselTeleguiado
+  nome: Espadachin
   icone: {fileID: 0}
   cooldown: 2
-  descricao: "Lan\xE7a 2 misseis teleguiados nos inimigos"
-  missilPrefab: {fileID: 8053342427428182042, guid: 3146cf739c5f54845a6c06ba9d8c4ffd, type: 3}
+  descricao: "Lan\xE7a um corte na horizontal"
+  cortePrefab: {fileID: 7158126110218869170, guid: d3375202cd6f1294d8ea6f1d87bad49f, type: 3}
+  velocidadeCorte: 100
+  tempoDestruicao: 10

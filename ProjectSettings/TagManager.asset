@@ -16,6 +16,7 @@ TagManager:
   - AreaLoja
   - Cenario
   - Boss
+  - Raio
   layers:
   - Default
   - TransparentFX

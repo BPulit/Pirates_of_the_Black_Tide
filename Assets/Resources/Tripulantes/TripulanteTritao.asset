@@ -9,11 +9,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4daf2ee547416e54698020b6f6025c07, type: 3}
-  m_Name: TripulanteCurandeiro
+  m_Script: {fileID: 11500000, guid: 0e66cc72e80bdcb4489d22d9c55aff5c, type: 3}
+  m_Name: TripulanteTritao
   m_EditorClassIdentifier: 
-  nome: Curandeiro
+  nome: "Trit\xE3o"
   icone: {fileID: 0}
-  cooldown: 20
-  descricao: "Esse medico dedicado usa toda sua for\xE7a para curar seus companheiros
-    e fornece uma vida extra para o navio porem ele precisa descansar por muito tempo"
+  cooldown: 1
+  descricao: 
+  ondaPrefab: {fileID: 6181012877353925109, guid: 4e92a0451252ed54fb827816444c0c9b, type: 3}
+  velocidadeOnda: 80
+  duracaoOnda: 10
+  dano: 6

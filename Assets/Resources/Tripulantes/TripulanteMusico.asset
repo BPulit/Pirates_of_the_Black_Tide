@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6e756e3f7b6c0b43825dfa88c9a37a9, type: 3}
+  m_Name: TripulanteMusico
+  m_EditorClassIdentifier: 
+  nome: Musico
+  icone: {fileID: 0}
+  cooldown: 2
+  descricao: " Lan\xE7a uma rajada de notas musicais capaz de atingir os inimigos
+    no mapa;"
+  notaPrefab: {fileID: 2153864367380145067, guid: f8e671fffda1a08429a9d9ac33e07a99, type: 3}
+  alturaInicial: 16
+  tempoPausa: 3
+  velocidadeNota: 120

@@ -18,16 +18,27 @@ public class PlayerXpManage : MonoBehaviour
         instance = this;
     }
 
+    void Update()
+    {
+        // CHEAT: Aperte "L" para ganhar XP suficiente e subir de nível
+        if (Input.GetKeyDown(KeyCode.L))
+        {
+            Debug.Log("CHEAT: Subindo de nível...");
+            GanharXP(xpParaProximoNivel);
+        }
+    }
+
     public void GanharXP(int quantidade)
     {
         xpAtual += quantidade;
 
-        if (xpAtual >= xpParaProximoNivel)
+        while (xpAtual >= xpParaProximoNivel)
         {
             xpAtual -= xpParaProximoNivel;
             nivel++;
+            xpParaProximoNivel += 10;
+
             TripulanteSelector.instance.MostrarEscolhaTripulantes(gameObject);
-            xpParaProximoNivel += 10; // pode ajustar a progressão
         }
 
         AtualizarUI();
