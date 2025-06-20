@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nome: Espadachin
   icone: {fileID: 0}
-  cooldown: 2
+  cooldown: 1
   descricao: "Lan\xE7a um corte na horizontal"
   cortePrefab: {fileID: 7158126110218869170, guid: d3375202cd6f1294d8ea6f1d87bad49f, type: 3}
   velocidadeCorte: 100

@@ -8,7 +8,8 @@ public class BolaDeCanhao : MonoBehaviour
 
     void Start()
     {
-        if (shooterTag == "Player")
+        // Se a bala foi disparada pelo Player e o dano ainda não foi atribuído
+        if (shooterTag == "Player" && dano == 0)
         {
             dano = StatusPlayer.Instance.ataque;
         }
@@ -47,11 +48,16 @@ public class BolaDeCanhao : MonoBehaviour
 
         if (shooterTag == "Inimigo")
         {
-            StatusPlayer player = collision.gameObject.GetComponent<StatusPlayer>();
-            if (player != null)
-            {
-                player.TomarDano(dano);
-            }
+                if (collision.gameObject.CompareTag("Bolha"))
+                {
+                    Destroy(gameObject); // Bala destruída ao colidir com a bolha
+                    return;
+                }
+                StatusPlayer player = collision.gameObject.GetComponent<StatusPlayer>();
+                if (player != null)
+                {
+                    player.TomarDano(dano);
+                }
         }
 
         Destroy(gameObject);

@@ -17,6 +17,7 @@ TagManager:
   - Cenario
   - Boss
   - Raio
+  - Bolha
   layers:
   - Default
   - TransparentFX
@@ -24,9 +25,9 @@ TagManager:
   - Montanhas
   - Water
   - UI
-  - 
-  - 
-  - 
+  - Protecao
+  - Enemy
+  - Player
   - 
   - 
   - 

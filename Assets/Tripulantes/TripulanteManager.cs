@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
+using System.Collections;
 
 public class TripulanteManager : MonoBehaviour
 {
@@ -13,17 +14,43 @@ public class TripulanteManager : MonoBehaviour
         else Destroy(gameObject);
     }
 
-    void Update()
+   void Update()
+{
+    foreach (var entrada in tripulantesAtivos)
     {
-        foreach (var entrada in tripulantesAtivos)
+        entrada.Value.Atualizar(Time.deltaTime);
+
+        KeyCode key = (KeyCode)System.Enum.Parse(typeof(KeyCode), entrada.Key.ToString());
+        if (Input.GetKeyDown(key))
         {
-            KeyCode key = (KeyCode)System.Enum.Parse(typeof(KeyCode), entrada.Key.ToString());
-            if (Input.GetKeyDown(key))
-            {
-                entrada.Value.TentarAtivar();
-            }
+            entrada.Value.TentarAtivar();
         }
     }
+}
+
+public void ReduzirCooldownTemporariamente(float fator, float duracao, Tripulante excecao)
+{
+    StartCoroutine(ReduzirCooldownCoroutine(fator, duracao, excecao));
+}
+
+private IEnumerator ReduzirCooldownCoroutine(float fator, float duracao, Tripulante excecao)
+{
+    foreach (var t in tripulantesAtivos)
+    {
+        if (t.Value.tripulante != excecao)
+        {
+            t.Value.AplicarModificadorCooldown(fator);
+        }
+    }
+
+    yield return new WaitForSeconds(duracao);
+
+    foreach (var t in tripulantesAtivos)
+    {
+        t.Value.ResetarModificadorCooldown();
+    }
+}
+
 
     public void RegistrarTripulante(Tripulante tripulante, TeclaAtivacao tecla, GameObject jogador)
     {

@@ -27,7 +27,7 @@ public class ZoneCheck : MonoBehaviour
     {
         while (!nivelAtingido)
         {
-            if (PlayerXpManage.instance.nivel >= 4)
+            if (PlayerXpManage.instance.nivel >= 10)
             {
                 nivelAtingido = true;
                 Debug.Log("Atingiu o nível 2! Inimigos comuns sumiram. Vá para o centro da arena.");

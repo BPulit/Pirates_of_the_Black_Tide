@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nome: Maga do clima
   icone: {fileID: 0}
-  cooldown: 2
+  cooldown: 10
   descricao: 
   prefabRaio: {fileID: 7718049488334743268, guid: 18f1dee956992b84e9141b30ed0e2cba, type: 3}
   quantidadeDeRaios: 16

@@ -8,10 +8,10 @@ public class UITripulanteHUD : MonoBehaviour
     public static UITripulanteHUD instance;
 
     [Header("UI")]
-    public Transform painelCartasHUD;          // Painel que vai conter as cartas
-    public GameObject prefabCartaTripulante;   // Prefab da carta HUD
+    public Transform painelCartasHUD;
+    public GameObject prefabCartaTripulante;
 
-    private Dictionary<Tripulante, Slider> cooldownsAtivos = new();
+    private List<UITripulanteCarta> cartas = new(); // Cartas instanciadas na HUD
 
     void Awake()
     {
@@ -27,33 +27,19 @@ public class UITripulanteHUD : MonoBehaviour
         if (carta != null)
         {
             carta.Configurar(tripulante, tecla);
-            cooldownsAtivos[tripulante] = carta.barraCooldown;
+            cartas.Add(carta); // guarda para futuras atualizações
         }
     }
 
-    public void IniciarCooldown(Tripulante tripulante)
+    public void AtualizarCooldown(Tripulante tripulante, float progresso)
     {
-        if (cooldownsAtivos.ContainsKey(tripulante))
+        foreach (var carta in cartas)
         {
-            Slider barra = cooldownsAtivos[tripulante];
-            float tempo = tripulante.cooldown;
-            StartCoroutine(AtualizarCooldown(barra, tempo));
+            if (carta.tripulante == tripulante)
+            {
+                carta.barraCooldown.gameObject.SetActive(progresso < 1f);
+                carta.barraCooldown.value = 1f - progresso; // 0 = cheio, 1 = vazio
+            }
         }
-    }
-
-    private System.Collections.IEnumerator AtualizarCooldown(Slider barra, float tempo)
-    {
-        barra.gameObject.SetActive(true);
-        float t = tempo;
-
-        while (t > 0)
-        {
-            barra.value = t / tempo;
-            t -= Time.deltaTime;
-            yield return null;
-        }
-
-        barra.value = 0;
-        barra.gameObject.SetActive(false);
     }
 }

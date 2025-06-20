@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2268608322867700352}
   - component: {fileID: 5003702463035686525}
   - component: {fileID: 6700876128025731176}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: CanhaoDireita
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -126,7 +126,8 @@ GameObject:
   - component: {fileID: 7581869339142773101}
   - component: {fileID: 7883753215836495144}
   - component: {fileID: 5476589933066810135}
-  m_Layer: 0
+  - component: {fileID: 7947219554878580474}
+  m_Layer: 7
   m_Name: Enemy
   m_TagString: Inimigo
   m_Icon: {fileID: 0}
@@ -293,6 +294,18 @@ MonoBehaviour:
   itensPossiveis:
   - {fileID: 1253162247643659479, guid: a7b13d7888b77a84db5c0ed7d051161b, type: 3}
   chanceDropItem: 0.5
+--- !u!114 &7947219554878580474
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3065875903134417676}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8d61b798cfad6f4f9ddec6efef3b99c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3326324912377870220
 GameObject:
   m_ObjectHideFlags: 0
@@ -305,7 +318,7 @@ GameObject:
   - component: {fileID: 1117334128542432211}
   - component: {fileID: 8292050839996373407}
   - component: {fileID: 5404261931845066423}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: CanhaoEsqurda
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -462,6 +475,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -4089444724165542772, guid: 60a934e4ac81c7a4f92e2bd554bc9add, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: -2268204724023741218, guid: 60a934e4ac81c7a4f92e2bd554bc9add, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: -220513160763779818, guid: 60a934e4ac81c7a4f92e2bd554bc9add, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 771191942280889233, guid: 60a934e4ac81c7a4f92e2bd554bc9add, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -469,6 +494,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 60a934e4ac81c7a4f92e2bd554bc9add, type: 3}
       propertyPath: m_Name
       value: CanhaoNavio (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 60a934e4ac81c7a4f92e2bd554bc9add, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 3683872004631872213, guid: 60a934e4ac81c7a4f92e2bd554bc9add, type: 3}
       propertyPath: m_LocalPosition.x
@@ -552,6 +581,10 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -2350157793614725210, guid: 9d43d338be3f0cf4ca18a8a4385ddf4f, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 218624599310835307, guid: 9d43d338be3f0cf4ca18a8a4385ddf4f, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -564,6 +597,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: NavioBasico
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9d43d338be3f0cf4ca18a8a4385ddf4f, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3406298624569657417, guid: 9d43d338be3f0cf4ca18a8a4385ddf4f, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 3536222355393559248, guid: 9d43d338be3f0cf4ca18a8a4385ddf4f, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -575,6 +616,10 @@ PrefabInstance:
     - target: {fileID: 3536222355393559248, guid: 9d43d338be3f0cf4ca18a8a4385ddf4f, type: 3}
       propertyPath: m_LocalPosition.z
       value: 0.53
+      objectReference: {fileID: 0}
+    - target: {fileID: 7699645931359189751, guid: 9d43d338be3f0cf4ca18a8a4385ddf4f, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 8712145373055243597, guid: 9d43d338be3f0cf4ca18a8a4385ddf4f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -654,6 +699,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -4089444724165542772, guid: 60a934e4ac81c7a4f92e2bd554bc9add, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: -2268204724023741218, guid: 60a934e4ac81c7a4f92e2bd554bc9add, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: -220513160763779818, guid: 60a934e4ac81c7a4f92e2bd554bc9add, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 771191942280889233, guid: 60a934e4ac81c7a4f92e2bd554bc9add, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -661,6 +718,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 60a934e4ac81c7a4f92e2bd554bc9add, type: 3}
       propertyPath: m_Name
       value: CanhaoNavio (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 60a934e4ac81c7a4f92e2bd554bc9add, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 3683872004631872213, guid: 60a934e4ac81c7a4f92e2bd554bc9add, type: 3}
       propertyPath: m_LocalPosition.x

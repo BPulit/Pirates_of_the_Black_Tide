@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nome: MisselTeleguiado
   icone: {fileID: 0}
-  cooldown: 2
+  cooldown: 10
   descricao: "Lan\xE7a 2 misseis teleguiados nos inimigos"
   missilPrefab: {fileID: 8053342427428182042, guid: 3146cf739c5f54845a6c06ba9d8c4ffd, type: 3}

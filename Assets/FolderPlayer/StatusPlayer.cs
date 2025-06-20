@@ -11,6 +11,7 @@ public class StatusPlayer : MonoBehaviour
     public int vidaAtual = 100;
     public float velocidade = 5f;
     public int ataque = 10;
+    public bool invulneravel = false;
 
     [Header("Referências UI")]
     public TextMeshProUGUI vidasTexto;
@@ -35,13 +36,18 @@ public class StatusPlayer : MonoBehaviour
 
     public void TomarDano(int dano)
     {
-        vidaAtual -= dano;
-        vidaAtual = Mathf.Max(vidaAtual, 0);
+        if (invulneravel)
+        {
+            Debug.Log("Dano ignorado: jogador está invulnerável");
+            return;
+        }
+            vidaAtual -= dano;
+            vidaAtual = Mathf.Max(vidaAtual, 0);
 
-        AtualizarUI();
+            AtualizarUI();
 
-        if (vidaAtual <= 0)
-            Morreu();
+            if (vidaAtual <= 0)
+                Morreu();
     }
 
     public void Curar(int quantidade)

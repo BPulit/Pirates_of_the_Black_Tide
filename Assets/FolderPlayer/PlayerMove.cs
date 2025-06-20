@@ -28,6 +28,10 @@ public class PlayerMove : MonoBehaviour
     [Header("Flutuação")]
     public float suavizacaoAltura = 2f;
 
+    [Header("Multiplicadores de Tripulantes")]
+    public float multiplicadorVelocidade = 1f;
+    public float multiplicadorRotacao = 1f;
+
     void Start()
     {
         rb = GetComponent<Rigidbody>();
@@ -65,7 +69,7 @@ public class PlayerMove : MonoBehaviour
 
         if (engineOn)
         {
-            rb.AddForce(transform.forward * StatusPlayer.Instance.velocidade, ForceMode.Force);
+            rb.AddForce(transform.forward * StatusPlayer.Instance.velocidade * multiplicadorVelocidade, ForceMode.Force);
         }
         else
         {
@@ -78,12 +82,12 @@ public class PlayerMove : MonoBehaviour
         {
             if (Input.GetKey(KeyCode.A))
             {
-                transform.Rotate(Vector3.up, -turnSpeed * Time.deltaTime);
+                transform.Rotate(Vector3.up, -turnSpeed * multiplicadorRotacao * Time.deltaTime);
                 targetTilt = tiltAmount;
             }
             else if (Input.GetKey(KeyCode.D))
             {
-                transform.Rotate(Vector3.up, turnSpeed * Time.deltaTime);
+                transform.Rotate(Vector3.up, turnSpeed * multiplicadorRotacao * Time.deltaTime);
                 targetTilt = -tiltAmount;
             }
         }
@@ -99,6 +103,8 @@ public class PlayerMove : MonoBehaviour
 
     void MoverNoModoOrbital()
     {
+        float velocidadeFinal = velocidadeAtual * multiplicadorVelocidade;
+
         if (Input.GetKey(KeyCode.S))
         {
             velocidadeAtual = Mathf.Max(velocidadeAtual - aceleracao * Time.deltaTime, velocidadeMinima);
@@ -108,7 +114,7 @@ public class PlayerMove : MonoBehaviour
             velocidadeAtual = Mathf.Min(velocidadeAtual + aceleracao * Time.deltaTime, velocidadeMaxima);
         }
 
-        transform.RotateAround(centroDaArena.position, Vector3.up, velocidadeAtual * Time.deltaTime);
+        transform.RotateAround(centroDaArena.position, Vector3.up, velocidadeFinal * Time.deltaTime);
 
         Vector3 direcaoCentro = (transform.position - centroDaArena.position).normalized;
         transform.position = centroDaArena.position + direcaoCentro * raioArena;
@@ -132,7 +138,7 @@ public class PlayerMove : MonoBehaviour
         if (collision.gameObject.CompareTag("Cenario"))
         {
             Vector3 awayDirection = transform.position - collision.contacts[0].point;
-            awayDirection.y = 0; // manter no plano
+            awayDirection.y = 0;
 
             StatusPlayer.Instance.TomarDano(1);
             rb.AddForce(awayDirection.normalized * repulsionForce, ForceMode.Impulse);
