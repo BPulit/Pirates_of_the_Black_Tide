@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: TripulanteBomba
   m_EditorClassIdentifier: 
   nome: MisselTeleguiado
+  idUnico: missel
   icone: {fileID: 0}
   cooldown: 10
   descricao: "Lan\xE7a 2 misseis teleguiados nos inimigos"

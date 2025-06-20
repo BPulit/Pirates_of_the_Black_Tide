@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: TripulanteCozinheiro
   m_EditorClassIdentifier: 
   nome: Cozinheiro
+  idUnico: cozinheiro
   icone: {fileID: 0}
   cooldown: 10
   descricao: 

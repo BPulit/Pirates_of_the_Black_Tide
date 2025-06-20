@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: TripulanteCiborgue
   m_EditorClassIdentifier: 
   nome: Ciborgue
+  idUnico: ciborgue
   icone: {fileID: 0}
   cooldown: 10
   descricao: 

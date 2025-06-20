@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: TripulanteEspadachim
   m_EditorClassIdentifier: 
   nome: Espadachin
+  idUnico: espadachin
   icone: {fileID: 0}
   cooldown: 1
   descricao: "Lan\xE7a um corte na horizontal"

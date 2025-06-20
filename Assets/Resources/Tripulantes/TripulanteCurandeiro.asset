@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: TripulanteCurandeiro
   m_EditorClassIdentifier: 
   nome: Curandeiro
+  idUnico: curandeiro
   icone: {fileID: 0}
   cooldown: 20
   descricao: "Esse medico dedicado usa toda sua for\xE7a para curar seus companheiros

@@ -29,20 +29,24 @@ public class PlayerXpManage : MonoBehaviour
     }
 
     public void GanharXP(int quantidade)
+{
+    xpAtual += quantidade;
+
+    while (xpAtual >= xpParaProximoNivel)
     {
-        xpAtual += quantidade;
+        xpAtual -= xpParaProximoNivel;
+        nivel++;
+        xpParaProximoNivel += 10;
 
-        while (xpAtual >= xpParaProximoNivel)
+        
+        if (nivel <= 6)
         {
-            xpAtual -= xpParaProximoNivel;
-            nivel++;
-            xpParaProximoNivel += 10;
-
             TripulanteSelector.instance.MostrarEscolhaTripulantes(gameObject);
         }
-
-        AtualizarUI();
     }
+
+    AtualizarUI();
+}
 
     void AtualizarUI()
     {

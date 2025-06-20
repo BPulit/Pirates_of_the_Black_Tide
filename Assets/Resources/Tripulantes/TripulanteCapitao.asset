@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: TripulanteCapitao
   m_EditorClassIdentifier: 
   nome: "Capit\xE3o"
+  idUnico: capitao
   icone: {fileID: 0}
   cooldown: 10
   descricao: 

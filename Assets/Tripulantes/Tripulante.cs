@@ -6,6 +6,7 @@ public enum TeclaAtivacao { Q, E, R, F, C }
 public class Tripulante : ScriptableObject
 {
     public string nome;
+    public string idUnico;
     public Sprite icone;
     public float cooldown;
     public string descricao;

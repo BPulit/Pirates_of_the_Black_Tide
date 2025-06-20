@@ -27,6 +27,10 @@ public class StatusEnemie : MonoBehaviour
             Die();
         }
     }
+    public int GetVidaAtual()
+    {
+        return saudeAtual;
+    }
 
     void Die()
     {

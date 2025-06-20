@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: TripulanteMagaGelo
   m_EditorClassIdentifier: 
   nome: Maga de Gelo
+  idUnico: magagelo
   icone: {fileID: 0}
   cooldown: 10
   descricao: 

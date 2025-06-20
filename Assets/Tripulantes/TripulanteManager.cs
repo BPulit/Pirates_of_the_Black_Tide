@@ -14,42 +14,42 @@ public class TripulanteManager : MonoBehaviour
         else Destroy(gameObject);
     }
 
-   void Update()
-{
-    foreach (var entrada in tripulantesAtivos)
+    void Update()
     {
-        entrada.Value.Atualizar(Time.deltaTime);
-
-        KeyCode key = (KeyCode)System.Enum.Parse(typeof(KeyCode), entrada.Key.ToString());
-        if (Input.GetKeyDown(key))
+        foreach (var entrada in tripulantesAtivos)
         {
-            entrada.Value.TentarAtivar();
-        }
-    }
-}
+            entrada.Value.Atualizar(Time.deltaTime);
 
-public void ReduzirCooldownTemporariamente(float fator, float duracao, Tripulante excecao)
-{
-    StartCoroutine(ReduzirCooldownCoroutine(fator, duracao, excecao));
-}
-
-private IEnumerator ReduzirCooldownCoroutine(float fator, float duracao, Tripulante excecao)
-{
-    foreach (var t in tripulantesAtivos)
-    {
-        if (t.Value.tripulante != excecao)
-        {
-            t.Value.AplicarModificadorCooldown(fator);
+            KeyCode key = (KeyCode)System.Enum.Parse(typeof(KeyCode), entrada.Key.ToString());
+            if (Input.GetKeyDown(key))
+            {
+                entrada.Value.TentarAtivar();
+            }
         }
     }
 
-    yield return new WaitForSeconds(duracao);
-
-    foreach (var t in tripulantesAtivos)
+    public void ReduzirCooldownTemporariamente(float fator, float duracao, Tripulante excecao)
     {
-        t.Value.ResetarModificadorCooldown();
+        StartCoroutine(ReduzirCooldownCoroutine(fator, duracao, excecao));
     }
-}
+
+    private IEnumerator ReduzirCooldownCoroutine(float fator, float duracao, Tripulante excecao)
+    {
+        foreach (var t in tripulantesAtivos)
+        {
+            if (t.Value.tripulante != excecao)
+            {
+                t.Value.AplicarModificadorCooldown(fator);
+            }
+        }
+
+        yield return new WaitForSeconds(duracao);
+
+        foreach (var t in tripulantesAtivos)
+        {
+            t.Value.ResetarModificadorCooldown();
+        }
+    }
 
 
     public void RegistrarTripulante(Tripulante tripulante, TeclaAtivacao tecla, GameObject jogador)
@@ -60,4 +60,21 @@ private IEnumerator ReduzirCooldownCoroutine(float fator, float duracao, Tripula
             UITripulanteHUD.instance.MostrarCarta(tripulante, tecla); // HUD
         }
     }
+
+    public bool PossuiTripulante(Tripulante tripulante)
+    {
+        foreach (var t in tripulantesAtivos.Values)
+        {
+            if (t.tripulante != null && t.tripulante.idUnico == tripulante.idUnico)
+                return true;
+        }
+        return false;
+    }
+    
+    public bool TeclaOcupada(TeclaAtivacao tecla)
+    {
+        return tripulantesAtivos.ContainsKey(tecla);
+    }
+
+
 }

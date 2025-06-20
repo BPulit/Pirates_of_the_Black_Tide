@@ -17,6 +17,8 @@ public class TripulanteSelector : MonoBehaviour
     public TextMeshProUGUI nome1;
     public Image icone2;
     public TextMeshProUGUI nome2;
+    public TextMeshProUGUI desc1;
+    public TextMeshProUGUI desc2;
 
     [Header("Painel de Teclas")]
     public GameObject painelTeclas;
@@ -37,10 +39,25 @@ public class TripulanteSelector : MonoBehaviour
     public void MostrarEscolhaTripulantes(GameObject player)
     {
         jogador = player;
-        Tripulante[] todos = Resources.LoadAll<Tripulante>("Tripulantes");
+       Tripulante[] todos = Resources.LoadAll<Tripulante>("Tripulantes");
 
-        // Embaralha e pega 2
-        List<Tripulante> lista = new List<Tripulante>(todos);
+        List<Tripulante> lista = new List<Tripulante>();
+
+        foreach (Tripulante t in todos)
+        {
+            if (!TripulanteManager.instance.PossuiTripulante(t))
+            {
+                lista.Add(t);
+            }
+        }
+
+        // Garante que existam ao menos dois para escolher
+        if (lista.Count < 2)
+        {
+            Debug.Log("Menos de 2 tripulantes disponíveis para escolha. Pulando seleção.");
+            Time.timeScale = 1f;
+            return;
+        }
         Tripulante t1 = lista[Random.Range(0, lista.Count)];
         lista.Remove(t1);
         Tripulante t2 = lista[Random.Range(0, lista.Count)];
@@ -48,12 +65,14 @@ public class TripulanteSelector : MonoBehaviour
         // Configura botão 1
         icone1.sprite = t1.icone;
         nome1.text = t1.nome;
+        desc1.text = t1.descricao;
         botaoTripulante1.onClick.RemoveAllListeners();
         botaoTripulante1.onClick.AddListener(() => EscolherTripulante(t1));
 
         // Configura botão 2
         icone2.sprite = t2.icone;
         nome2.text = t2.nome;
+        desc2.text = t2.descricao;
         botaoTripulante2.onClick.RemoveAllListeners();
         botaoTripulante2.onClick.AddListener(() => EscolherTripulante(t2));
 
@@ -67,13 +86,27 @@ public class TripulanteSelector : MonoBehaviour
         painelSelecao.SetActive(false);
         painelTeclas.SetActive(true);
 
-        // Configura cada botão de tecla
-        botaoQ.onClick.AddListener(() => AtribuirTecla(TeclaAtivacao.Q));
-        botaoE.onClick.AddListener(() => AtribuirTecla(TeclaAtivacao.E));
-        botaoR.onClick.AddListener(() => AtribuirTecla(TeclaAtivacao.R));
-        botaoF.onClick.AddListener(() => AtribuirTecla(TeclaAtivacao.F));
-        botaoC.onClick.AddListener(() => AtribuirTecla(TeclaAtivacao.C));
+        
+        ConfigurarBotaoTecla(botaoQ, TeclaAtivacao.Q);
+        ConfigurarBotaoTecla(botaoE, TeclaAtivacao.E);
+        ConfigurarBotaoTecla(botaoR, TeclaAtivacao.R);
+        ConfigurarBotaoTecla(botaoF, TeclaAtivacao.F);
+        ConfigurarBotaoTecla(botaoC, TeclaAtivacao.C);
     }
+
+    void ConfigurarBotaoTecla(Button botao, TeclaAtivacao tecla)
+    {
+        botao.onClick.RemoveAllListeners();
+
+        bool teclaDisponivel = !TripulanteManager.instance.TeclaOcupada(tecla);
+        botao.interactable = teclaDisponivel;
+
+        if (teclaDisponivel)
+        {
+            botao.onClick.AddListener(() => AtribuirTecla(tecla));
+        }
+    }
+
 
     void AtribuirTecla(TeclaAtivacao tecla)
     {

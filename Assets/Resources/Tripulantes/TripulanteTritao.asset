@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: TripulanteTritao
   m_EditorClassIdentifier: 
   nome: "Trit\xE3o"
+  idUnico: tritao
   icone: {fileID: 0}
   cooldown: 10
   descricao: 

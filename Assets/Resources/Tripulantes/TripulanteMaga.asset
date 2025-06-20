@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: TripulanteMaga
   m_EditorClassIdentifier: 
   nome: Maga do clima
+  idUnico: magaclima
   icone: {fileID: 0}
   cooldown: 10
   descricao: 

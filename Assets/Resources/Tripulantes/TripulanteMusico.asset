@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: TripulanteMusico
   m_EditorClassIdentifier: 
   nome: Musico
+  idUnico: musico
   icone: {fileID: 0}
   cooldown: 10
   descricao: " Lan\xE7a uma rajada de notas musicais capaz de atingir os inimigos
