@@ -11,5 +11,6 @@ public class TripulanteCozinheiro : Tripulante
         Debug.Log("Cozinheiro ativado! Cooldowns reduzidos temporariamente.");
 
         TripulanteManager.instance.ReduzirCooldownTemporariamente(fatorReducao, duracao, this);
+        AudioManager.Instance.TocarSomEfeito(9);
     }
 }

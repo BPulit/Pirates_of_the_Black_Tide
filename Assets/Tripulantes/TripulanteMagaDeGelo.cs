@@ -24,6 +24,7 @@ public class TripulanteMagaDeGelo : Tripulante
                 if (congelador != null)
                 {
                     congelador.Congelar(duracaoCongelamento);
+                    AudioManager.Instance.TocarSomEfeito(10);
                     Debug.Log($"[Maga de Gelo] Congelou {alvo.name} por {duracaoCongelamento}s");
                 }
                 else

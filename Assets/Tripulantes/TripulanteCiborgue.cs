@@ -11,6 +11,7 @@ public class TripulanteCiborgue : Tripulante
     {
         Transform pontoSpawn = jogador.transform;
         GameObject bolha = GameObject.Instantiate(prefabBolha, pontoSpawn.position, Quaternion.identity);
+         AudioManager.Instance.TocarSomEfeito(8);
         bolha.transform.SetParent(jogador.transform);
         bolha.layer = LayerMask.NameToLayer("Protecao");
 

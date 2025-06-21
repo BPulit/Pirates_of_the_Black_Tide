@@ -23,6 +23,7 @@ public class TripulanteBomba : Tripulante
         {
             Vector3 pos = jogador.transform.position + Vector3.up * (2 + i);
             GameObject missil = Instantiate(missilPrefab, pos, Quaternion.identity);
+            AudioManager.Instance.TocarSomDirecional(7, missil.transform.position);
 
             MissilTeleguiado missilScript = missil.GetComponent<MissilTeleguiado>();
             if (missilScript != null)

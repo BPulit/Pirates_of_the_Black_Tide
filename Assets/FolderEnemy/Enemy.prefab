@@ -480,7 +480,7 @@ MonoBehaviour:
   maxMoedas: 3
   itensPossiveis:
   - {fileID: 1253162247643659479, guid: a7b13d7888b77a84db5c0ed7d051161b, type: 3}
-  chanceDropItem: 0.5
+  chanceDropItem: 1
 --- !u!114 &7947219554878580474
 MonoBehaviour:
   m_ObjectHideFlags: 0
