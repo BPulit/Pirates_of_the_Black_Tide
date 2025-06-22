@@ -11,11 +11,18 @@ public class TripulanteBomba : Tripulante
         base.AtivarHabilidade(jogador);
         Debug.Log("Tripulante Bomba ativado");
 
+        // Pega inimigos normais e boss
         Transform[] inimigos = GameObject.FindGameObjectsWithTag("Inimigo")
             .Concat(GameObject.FindGameObjectsWithTag("Boss"))
             .Select(go => go.transform)
             .OrderBy(t => Vector3.Distance(jogador.transform.position, t.position))
             .ToArray();
+
+        if (inimigos.Length == 0)
+        {
+            Debug.LogWarning("Nenhum inimigo ou boss encontrado para mirar com os mísseis.");
+            return;
+        }
 
         int quantidadeAlvos = Mathf.Min(2, inimigos.Length);
 
@@ -23,12 +30,18 @@ public class TripulanteBomba : Tripulante
         {
             Vector3 pos = jogador.transform.position + Vector3.up * (2 + i);
             GameObject missil = Instantiate(missilPrefab, pos, Quaternion.identity);
-            AudioManager.Instance.TocarSomDirecional(7, missil.transform.position);
+
+            if (AudioManager.Instance != null)
+                AudioManager.Instance.TocarSomDirecional(7, missil.transform.position);
 
             MissilTeleguiado missilScript = missil.GetComponent<MissilTeleguiado>();
             if (missilScript != null)
             {
                 missilScript.DefinirAlvo(inimigos[i]);
+            }
+            else
+            {
+                Debug.LogError("Missil instanciado não possui o script MissilTeleguiado!");
             }
         }
     }

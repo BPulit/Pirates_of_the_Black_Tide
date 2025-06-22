@@ -878,6 +878,7 @@ GameObject:
   - component: {fileID: 6676238351061634276}
   - component: {fileID: 9114423896590253677}
   - component: {fileID: 3814772379205641024}
+  - component: {fileID: 3304054475318442042}
   m_Layer: 0
   m_Name: Kraken 1
   m_TagString: Boss
@@ -979,6 +980,27 @@ MonoBehaviour:
   - {fileID: 7439757789831621002}
   velocidadeRotacao: 20
   intervaloEntreAtaques: 3
+--- !u!65 &3304054475318442042
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3979159395177821778}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 76.72502, y: 117.25588, z: 100.966576}
+  m_Center: {x: -5.22114, y: 58.128002, z: -0.51536286}
 --- !u!1 &5236934168700840769
 GameObject:
   m_ObjectHideFlags: 0

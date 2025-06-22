@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 1766905497465568641}
   m_Layer: 0
   m_Name: Missel
-  m_TagString: Untagged
+  m_TagString: Projectile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -74,9 +74,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 059fb321ee4b8584796dea1870d61407, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocidade: 40
+  velocidade: 50
   rotacao: 5
-  explosaoPrefab: {fileID: 4544093511871096023, guid: d9635d2790730964b9f22b5f7b8bda29, type: 3}
+  tempoDeVida: 7
+  dano: 4
+  efeitoExplosao: {fileID: 0}
 --- !u!136 &1766905497465568641
 CapsuleCollider:
   m_ObjectHideFlags: 0

@@ -36,23 +36,35 @@ public class MissilTeleguiado : MonoBehaviour
     }
 
     private void OnTriggerEnter(Collider other)
+{
+    if (other.CompareTag("Inimigo") || other.CompareTag("Boss"))
     {
-        if (other.CompareTag("Inimigo") || other.CompareTag("Boss"))
+        bool aplicouDano = false;
+
+        var inimigo = other.GetComponent<StatusEnemie>();
+        if (inimigo != null)
         {
-            // Dano ao inimigo
-            var inimigo = other.GetComponent<StatusEnemie>();
-            if (inimigo != null)
-            {
-                inimigo.TakeDamage(dano);
-            }
+            inimigo.TakeDamage(dano);
+            aplicouDano = true;
+        }
 
-            // Efeito de explosão
-            if (efeitoExplosao != null)
-            {
-                Instantiate(efeitoExplosao, transform.position, Quaternion.identity);
-            }
+        var kraken = other.GetComponent<KrakenStatus>();
+        if (kraken != null)
+        {
+            kraken.TakeDamage(dano);
+            aplicouDano = true;
+        }
 
+        if (aplicouDano && efeitoExplosao != null)
+        {
+            Instantiate(efeitoExplosao, transform.position, Quaternion.identity);
+        }
+
+        if (aplicouDano)
+        {
             Destroy(gameObject);
         }
     }
+}
+
 }
