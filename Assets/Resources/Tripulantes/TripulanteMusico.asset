@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nome: Musico
   idUnico: musico
-  icone: {fileID: 0}
+  icone: {fileID: 21300000, guid: 17eccbbf3b4e77e44933741d79b17d18, type: 3}
   cooldown: 10
   descricao: " Lan\xE7a uma rajada de notas musicais capaz de atingir os inimigos
     no mapa;"

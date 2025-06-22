@@ -4,6 +4,7 @@ using System.Collections;
 public class AreaLoja : MonoBehaviour
 {
     public GameObject painelLoja;
+    public GameObject painelTriAtivo;
     public PlayerMove playerMove;
 
     private Collider areaCollider;
@@ -18,6 +19,7 @@ public class AreaLoja : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             if (painelLoja != null) painelLoja.SetActive(true);
+            painelTriAtivo.SetActive(false);
             if (playerMove != null) playerMove.enabled = false; // trava o navio
             Time.timeScale = 0f; // pausa o tempo
         }
@@ -26,6 +28,7 @@ public class AreaLoja : MonoBehaviour
     public void FecharLoja()
     {
         if (painelLoja != null) painelLoja.SetActive(false);
+        painelTriAtivo.SetActive(true);
         if (playerMove != null) playerMove.enabled = true; // volta o controle do navio
         Time.timeScale = 1f; // volta o tempo
 

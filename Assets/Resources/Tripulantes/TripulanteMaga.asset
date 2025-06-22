@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nome: Maga do clima
   idUnico: magaclima
-  icone: {fileID: 0}
+  icone: {fileID: 21300000, guid: 17e8022f324f9c14e894d35a03dd064a, type: 3}
   cooldown: 10
   descricao: 
   prefabRaio: {fileID: 7718049488334743268, guid: 18f1dee956992b84e9141b30ed0e2cba, type: 3}

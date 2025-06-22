@@ -12,6 +12,7 @@ public class TripulanteSelector : MonoBehaviour
     public Button botaoTripulante1;
     public Button botaoTripulante2;
 
+
     [Header("Info Visual dos Botões")]
     public Image icone1;
     public TextMeshProUGUI nome1;
@@ -23,6 +24,8 @@ public class TripulanteSelector : MonoBehaviour
     [Header("Painel de Teclas")]
     public GameObject painelTeclas;
     public Button botaoQ, botaoE, botaoR, botaoF, botaoC;
+    [Header("HUD Tripulantes Ativos")]
+    public GameObject painelTripAtivo;
 
     private Tripulante escolhido;
     private GameObject jogador;
@@ -77,6 +80,7 @@ public class TripulanteSelector : MonoBehaviour
         botaoTripulante2.onClick.AddListener(() => EscolherTripulante(t2));
 
         painelSelecao.SetActive(true);
+        painelTripAtivo.SetActive(false);
         Time.timeScale = 0f;
     }
 
@@ -113,5 +117,6 @@ public class TripulanteSelector : MonoBehaviour
         TripulanteManager.instance.RegistrarTripulante(escolhido, tecla, jogador);
         Time.timeScale = 1f;
         painelTeclas.SetActive(false);
+        painelTripAtivo.SetActive(true);
     }
 }

@@ -14,12 +14,14 @@ public class PauseManager : MonoBehaviour
     public Slider sliderNatureza;
 
     public Toggle fullScreenToggle;
+    public GameObject painelTripAtivo;
 
     private bool isPaused = false;
 
     void Start()
     {
         pausePanel.SetActive(false);
+        painelTripAtivo.SetActive(true);
         fullScreenToggle.isOn = Screen.fullScreen;
 
         // Inicializa sliders com valores de 0.0001 a 1, convertendo dB pra valor linear
@@ -48,6 +50,7 @@ public class PauseManager : MonoBehaviour
     public void TogglePause()
     {
         isPaused = !isPaused;
+        painelTripAtivo.SetActive(!isPaused);
         pausePanel.SetActive(isPaused);
         Time.timeScale = isPaused ? 0f : 1f;
         AudioListener.pause = isPaused;
