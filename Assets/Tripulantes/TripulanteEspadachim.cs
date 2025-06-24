@@ -10,6 +10,7 @@ public class TripulanteEspadachim : Tripulante
     public override void AtivarHabilidade(GameObject jogador)
     {
         base.AtivarHabilidade(jogador);
+        AudioManager.Instance.TocarSomEfeito(13);
 
         Vector3 spawnPos = jogador.transform.position + jogador.transform.forward * 3f + Vector3.up * 1f;
         GameObject corte = Instantiate(cortePrefab, spawnPos, jogador.transform.rotation);

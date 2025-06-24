@@ -12,11 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e66cc72e80bdcb4489d22d9c55aff5c, type: 3}
   m_Name: TripulanteTritao
   m_EditorClassIdentifier: 
-  nome: "Trit\xE3o"
+  nome: The fish man
   idUnico: tritao
   icone: {fileID: 0}
-  cooldown: 10
-  descricao: 
+  cooldown: 60
+  descricao: 'Create waves on the sides of the boat that sweep the sea and destroy
+    enemies. Cooldown: 60s'
   ondaPrefab: {fileID: 6181012877353925109, guid: 4e92a0451252ed54fb827816444c0c9b, type: 3}
   velocidadeOnda: 80
   duracaoOnda: 10

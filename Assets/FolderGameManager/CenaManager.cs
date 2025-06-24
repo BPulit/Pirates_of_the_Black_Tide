@@ -12,13 +12,21 @@ public class CenaManager : MonoBehaviour
             case "MenuInicial":
                 AudioManager.Instance.TocarMusica(1);
                 AudioManager.Instance.TocarSomNaturza(0);
-                AudioManager.Instance.TocarSomNaturza(0);
+                AudioManager.Instance.TocarSomNaturza(1);
                 break;
 
             case "Fase1":
                 AudioManager.Instance.TocarMusica(0);
                 AudioManager.Instance.TocarSomNaturza(0);
                 AudioManager.Instance.TocarSomNaturza(1);
+                AudioManager.Instance.TocarSomNaturza(2);
+                break;
+
+            case "Modoinfinito":
+                AudioManager.Instance.TocarMusica(2);
+                AudioManager.Instance.TocarSomNaturza(0);
+                AudioManager.Instance.TocarSomNaturza(1);
+                AudioManager.Instance.TocarSomNaturza(2);
                 break;
 
             default:
@@ -38,7 +46,7 @@ public class CenaManager : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.I))
         {
-            SceneManager.LoadScene("Fase2");
+            SceneManager.LoadScene("ModoInfinito");
         }
     }
 }

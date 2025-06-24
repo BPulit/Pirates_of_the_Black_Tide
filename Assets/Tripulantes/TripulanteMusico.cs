@@ -22,7 +22,7 @@ public class TripulanteMusico : Tripulante
         {
             Vector3 posSpawn = jogador.transform.position + Vector3.up * 1f;
             GameObject nota = GameObject.Instantiate(notaPrefab, posSpawn, Quaternion.identity);
-
+            AudioManager.Instance.TocarSomEfeito(18);
             Rigidbody rb = nota.GetComponent<Rigidbody>();
             rb.useGravity = false;
             rb.linearVelocity = Vector3.up * alturaInicial;

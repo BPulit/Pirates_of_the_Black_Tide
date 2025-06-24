@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d219a8fecda8b341b5df2d897b99d15, type: 3}
   m_Name: TripulanteEspadachim
   m_EditorClassIdentifier: 
-  nome: Espadachin
+  nome: The swordsman
   idUnico: espadachin
   icone: {fileID: 21300000, guid: 49457ebd05a614c43bb3816c074284f8, type: 3}
-  cooldown: 1
-  descricao: "Lan\xE7a um corte na horizontal"
+  cooldown: 20
+  descricao: 'Use two spads to throw a straight X cut. Cooldown: 20s'
   cortePrefab: {fileID: 7158126110218869170, guid: d3375202cd6f1294d8ea6f1d87bad49f, type: 3}
   velocidadeCorte: 100
   tempoDestruicao: 10

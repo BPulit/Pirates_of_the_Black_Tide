@@ -12,12 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6e756e3f7b6c0b43825dfa88c9a37a9, type: 3}
   m_Name: TripulanteMusico
   m_EditorClassIdentifier: 
-  nome: Musico
+  nome: The Musician
   idUnico: musico
   icone: {fileID: 21300000, guid: 17eccbbf3b4e77e44933741d79b17d18, type: 3}
-  cooldown: 10
-  descricao: " Lan\xE7a uma rajada de notas musicais capaz de atingir os inimigos
-    no mapa;"
+  cooldown: 50
+  descricao: ' Launches a burst of musical notes capable of hitting enemies on the
+    map; Cooldown: 50s'
   notaPrefab: {fileID: 2153864367380145067, guid: f8e671fffda1a08429a9d9ac33e07a99, type: 3}
   alturaInicial: 16
   tempoPausa: 3

@@ -66,6 +66,9 @@ public class StatusPlayer : MonoBehaviour
         }
 
         vidaAtual -= dano;
+        Object.FindFirstObjectByType<OverlayEffect>()?.MostrarDano();
+
+
         vidaAtual = Mathf.Max(vidaAtual, 0);
         AtualizarUI(false);
 

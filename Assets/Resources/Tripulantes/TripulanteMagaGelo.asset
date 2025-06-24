@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8028a2bceb3e6194c9f203b677f07c14, type: 3}
   m_Name: TripulanteMagaGelo
   m_EditorClassIdentifier: 
-  nome: Maga de Gelo
+  nome: The Ice witch
   idUnico: magagelo
   icone: {fileID: 0}
-  cooldown: 10
-  descricao: 
+  cooldown: 50
+  descricao: 'Freezes the movement of enemies for a period of time. Cooldown: 50s'
   raio: 100
   duracaoCongelamento: 7

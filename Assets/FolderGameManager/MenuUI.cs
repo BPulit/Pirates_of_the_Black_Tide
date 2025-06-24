@@ -21,7 +21,7 @@ public class MenuUI : MonoBehaviour
         PlayerPrefs.DeleteKey("naviosDestruidos");
         PlayerPrefs.DeleteKey("nivel");
         PlayerPrefs.DeleteKey("bossDerrotados");
-        SceneManager.LoadScene("Infinito");
+        SceneManager.LoadScene("ModoInfinito");
     }
 
      public void ComoJogar()

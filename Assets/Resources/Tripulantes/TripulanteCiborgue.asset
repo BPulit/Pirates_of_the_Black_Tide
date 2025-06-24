@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16fb7437e47e06141bd9550162eb9bfa, type: 3}
   m_Name: TripulanteCiborgue
   m_EditorClassIdentifier: 
-  nome: Ciborgue
+  nome: The Cyborg
   idUnico: ciborgue
-  icone: {fileID: 0}
-  cooldown: 10
-  descricao: 
+  icone: {fileID: 21300000, guid: eb92a07e38f023243b5f3cdfbf829f9c, type: 3}
+  cooldown: 60
+  descricao: 'Creates a shield that protects the ship from attack. Cooldown: 60s'
   prefabBolha: {fileID: 4935901451866062599, guid: 9f0392921bc04dd4799806d4f5ca2368, type: 3}
   tempoProtecao: 5

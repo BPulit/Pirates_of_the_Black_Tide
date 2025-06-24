@@ -265,9 +265,9 @@ MonoBehaviour:
   offsetLocal: {x: 0, y: 100, z: -100}
   suavizacao: 2
   anguloVertical: 30
-  offsetBoss: {x: 200, y: 700, z: 0}
-  anguloBoss: 90
-  tempoTransicao: 8
+  offsetBoss: {x: 150, y: 450, z: 0}
+  anguloBoss: 70
+  tempoTransicao: 12
 --- !u!1 &879382118472083050
 GameObject:
   m_ObjectHideFlags: 0
@@ -754,6 +754,9 @@ MonoBehaviour:
   ataque: 5
   invulneravel: 0
   vidasTexto: {fileID: 0}
+  sliderVidaInstantanea: {fileID: 0}
+  sliderVidaDelay: {fileID: 0}
+  velocidadeDelay: 0.2
 --- !u!114 &2205042509116584578
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1325,6 +1328,8 @@ MonoBehaviour:
   audioSource3DPrefab: {fileID: 3952397960949590027, guid: 33e0f4d8c549c6149a844b85a88c2a66, type: 3}
   musicas:
   - {fileID: 8300000, guid: 7d88697e25d37ba40aff7e435fa4eeae, type: 3}
+  - {fileID: 8300000, guid: b15cfe2f80946f342994a0e474f6ebed, type: 3}
+  - {fileID: 8300000, guid: 9ff0897d550ff844486293539ffb3c30, type: 3}
   efeitos:
   - {fileID: 8300000, guid: 1bc659bdba3d01445940e8a05997c2ea, type: 3}
   - {fileID: 8300000, guid: c5c804ecefb0b8e47be9090fad29a37e, type: 3}
@@ -1333,8 +1338,20 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 729bf5bdbaf9c9542a906d74c7fc64f0, type: 3}
   - {fileID: 8300000, guid: 73dec55d24b156d4b8e28e2d74afbd09, type: 3}
   - {fileID: 8300000, guid: 8f06b339d850b304098aa272797cfecb, type: 3}
+  - {fileID: 8300000, guid: 64112c2248037f74aaff238929981dd5, type: 3}
+  - {fileID: 8300000, guid: 10a115f78ab102742a578643702b0433, type: 3}
+  - {fileID: 8300000, guid: ab389088d296ee444a4cbf9674941334, type: 3}
+  - {fileID: 8300000, guid: 1c516aedb020281498033155314e1444, type: 3}
+  - {fileID: 8300000, guid: b455348eeb61c8c49997aa034d090efc, type: 3}
+  - {fileID: 8300000, guid: 95194a30e580ed541bf79d641b19588e, type: 3}
+  - {fileID: 8300000, guid: 0e8109ed0662a74408a756147fd44f1d, type: 3}
+  - {fileID: 8300000, guid: 232289176c94da5428bb345b7308cacd, type: 3}
+  - {fileID: 8300000, guid: 4476f84d97b9d954b8a3f03be19ac312, type: 3}
+  - {fileID: 8300000, guid: d758a4f7a7a630b44ae8a54db0cece22, type: 3}
+  - {fileID: 8300000, guid: cfdd8155fb4055c4aa2322ebfecf1554, type: 3}
+  - {fileID: 8300000, guid: a50f2097223049844af81298700c4487, type: 3}
   natureza:
-  - {fileID: 8300000, guid: b39f60abcc993894693a407a951ec07e, type: 3}
+  - {fileID: 8300000, guid: 2877cbbbe92feca478dacf74c27f93f5, type: 3}
   - {fileID: 8300000, guid: 525863d934d41234f8fbf39c60a2785d, type: 3}
   - {fileID: 8300000, guid: 63d52b916b002204696dd7721ae88b14, type: 3}
 --- !u!1 &7861542489999825808

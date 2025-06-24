@@ -10,6 +10,7 @@ public class TripulanteTritao : Tripulante
 
 public override void AtivarHabilidade(GameObject jogador)
 {
+    AudioManager.Instance.TocarSomEfeito(15);
     base.AtivarHabilidade(jogador);
 
     Vector3 pos = jogador.transform.position;

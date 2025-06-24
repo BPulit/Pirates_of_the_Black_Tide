@@ -12,13 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b911d8f7d503e1844b6a31be3810a4d3, type: 3}
   m_Name: TripulanteMaga
   m_EditorClassIdentifier: 
-  nome: Maga do clima
+  nome: The Climate Witch
   idUnico: magaclima
   icone: {fileID: 21300000, guid: 17e8022f324f9c14e894d35a03dd064a, type: 3}
-  cooldown: 10
-  descricao: 
+  cooldown: 40
+  descricao: 'Creates tornadoes around the ship, protecting the ship and destroying
+    enemies. Cooldown: 40s'
   prefabRaio: {fileID: 7718049488334743268, guid: 18f1dee956992b84e9141b30ed0e2cba, type: 3}
-  quantidadeDeRaios: 16
+  quantidadeDeRaios: 12
   raioDoCirculo: 100
-  duracaoRaio: 4
-  danoPorSegundo: 1
+  duracaoRaio: 7
+  danoPorSegundo: 2

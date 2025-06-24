@@ -8,6 +8,7 @@ public class RaioTemporal : MonoBehaviour
 
     public float velocidadeDescida = 10f;
     private bool tocouChao = false;
+    private float velocidadeRotacao;
 
     void Update()
     {
@@ -21,15 +22,19 @@ public class RaioTemporal : MonoBehaviour
                 tempoVivo = 0f;
             }
         }
-        else
+       else
         {
             tempoVivo += Time.deltaTime;
+
+            // Gira suavemente enquanto ativo
+            transform.Rotate(Vector3.up * velocidadeRotacao * Time.deltaTime);
 
             if (tempoVivo >= duracao)
             {
                 Destroy(gameObject);
             }
         }
+
     }
 
     void OnTriggerStay(Collider other)
@@ -53,8 +58,11 @@ public class RaioTemporal : MonoBehaviour
     }
 
     public void Configurar(float dano, float duracaoRaio)
-    {
-        this.danoPorSegundo = dano;
-        this.duracao = duracaoRaio;
-    }
+{
+    this.danoPorSegundo = dano;
+    this.duracao = duracaoRaio;
+
+    // Gira entre 80 e 130 graus por segundo
+    this.velocidadeRotacao = Random.Range(180f, 200f);
+}
 }

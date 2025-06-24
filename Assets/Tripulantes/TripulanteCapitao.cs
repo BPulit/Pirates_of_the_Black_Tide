@@ -13,6 +13,7 @@ public class TripulanteCapitao : Tripulante
         PlayerCapitaoControlador capitao = jogador.GetComponent<PlayerCapitaoControlador>();
         if (capitao != null)
         {
+            AudioManager.Instance.TocarSomEfeito(12);
             capitao.AtivarManobra(duracao, velocidadeExtra, rotacaoExtra);
         }
     }

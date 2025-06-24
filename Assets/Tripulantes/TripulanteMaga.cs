@@ -12,6 +12,7 @@ public class TripulanteMaga : Tripulante
     public override void AtivarHabilidade(GameObject jogador)
     {
         base.AtivarHabilidade(jogador);
+        AudioManager.Instance.TocarSomEfeito(14);
 
         Vector3 centro = jogador.transform.position;
 

@@ -12,12 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8dfbe4b91171374abef7bd504befb44, type: 3}
   m_Name: TripulanteCapitao
   m_EditorClassIdentifier: 
-  nome: "Capit\xE3o"
+  nome: The Captain
   idUnico: capitao
-  icone: {fileID: 0}
-  cooldown: 10
-  descricao: 
+  icone: {fileID: 21300000, guid: 97f8176365581ad45986b5596a45c5a4, type: 3}
+  cooldown: 50
+  descricao: 'Increases the speed of the winds and makes the ship immune. Cooldown:
+    50s'
   duracao: 10
   velocidadeExtra: 2
   rotacaoExtra: 2
-  cooldownProtecao: 10
+  cooldownProtecao: 15

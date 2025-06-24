@@ -65,13 +65,14 @@ public class KrakenStatus : MonoBehaviour
     void Morrer()
     {
         MensagemUI.instance.MostrarMensagem("Parabens voce matou o kraken!");
+         SceneManager.LoadScene("Vitoria");
 
 
         if (playerMove != null)
         {
             playerMove.modoOrbital = false;
 
-            
+
             if (playerMove.centroDaArena != null)
             {
                 Destroy(playerMove.centroDaArena.gameObject);

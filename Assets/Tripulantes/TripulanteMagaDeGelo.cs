@@ -9,11 +9,12 @@ public class TripulanteMagaDeGelo : Tripulante
     public override void AtivarHabilidade(GameObject jogador)
     {
         Collider[] alvos = Physics.OverlapSphere(jogador.transform.position, raio);
-
+        AudioManager.Instance.TocarSomEfeito(10);
         foreach (Collider alvo in alvos)
         {
             if (alvo.CompareTag("Inimigo"))
             {
+                
                 CongelarInimigo congelador = alvo.GetComponent<CongelarInimigo>();
 
                 if (congelador == null)
@@ -24,7 +25,7 @@ public class TripulanteMagaDeGelo : Tripulante
                 if (congelador != null)
                 {
                     congelador.Congelar(duracaoCongelamento);
-                    AudioManager.Instance.TocarSomEfeito(10);
+                    
                     Debug.Log($"[Maga de Gelo] Congelou {alvo.name} por {duracaoCongelamento}s");
                 }
                 else

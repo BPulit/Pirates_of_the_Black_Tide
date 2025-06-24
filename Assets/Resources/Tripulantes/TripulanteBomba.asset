@@ -12,9 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e11ba899c7f4e249abdb508a5a1e360, type: 3}
   m_Name: TripulanteBomba
   m_EditorClassIdentifier: 
-  nome: MisselTeleguiado
+  nome: O The Shooter
   idUnico: missel
-  icone: {fileID: 0}
-  cooldown: 10
-  descricao: "Lan\xE7a 2 misseis teleguiados nos inimigos"
+  icone: {fileID: 21300000, guid: e996ac90ea945a741a4fc86c177a3838, type: 3}
+  cooldown: 20
+  descricao: 'Shoot two guided missiles that follow the closest enemies. Cooldown:
+    25s'
   missilPrefab: {fileID: 8053342427428182042, guid: 3146cf739c5f54845a6c06ba9d8c4ffd, type: 3}

@@ -12,9 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4daf2ee547416e54698020b6f6025c07, type: 3}
   m_Name: TripulanteCurandeiro
   m_EditorClassIdentifier: 
-  nome: Curandeiro
+  nome: The doctor
   idUnico: curandeiro
   icone: {fileID: 0}
-  cooldown: 20
-  descricao: "Esse medico dedicado usa toda sua for\xE7a para curar seus companheiros
-    e fornece uma vida extra para o navio porem ele precisa descansar por muito tempo"
+  cooldown: 120
+  descricao: 'This dedicated doctor uses all his strength to heal his companions
+    and provides extra life for the ship but he needs to rest for a long time. Cooldown:
+    120s'

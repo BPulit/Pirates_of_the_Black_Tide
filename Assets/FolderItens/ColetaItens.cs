@@ -20,6 +20,7 @@ void OnTriggerEnter(Collider other)
             if (player != null)
             {
                 player.Curar(1); // ou a quantidade que você quiser
+                AudioManager.Instance.TocarSomEfeito(16);
             }
             break;
 
