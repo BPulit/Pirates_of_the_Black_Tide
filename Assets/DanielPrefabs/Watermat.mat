@@ -130,12 +130,12 @@ Material:
     - _SrcBlend: 1
     - _SrcBlendAlpha: 1
     - _Surface: 0
-    - _WaterDepth: -1.9
-    - _WaveFrequency: 66.27
-    - _WaveSpeed: 0.25
+    - _WaterDepth: 0
+    - _WaveFrequency: 0
+    - _WaveSpeed: 0
     - _WorkflowMode: 1
     - _ZWrite: 1
-    - _waveAmplitude: 0.05
+    - _waveAmplitude: 0.03
     m_Colors:
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}

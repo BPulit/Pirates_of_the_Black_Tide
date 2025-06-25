@@ -1,5 +1,9 @@
 fileFormatVersion: 2
-guid: ca638893c6a9c9147a688134d7c3e581
+<<<<<<< Updated upstream:Assets/Tripulantes/Carta.prefab.meta
+guid: 8632fc3aca2178a448038e89245dd906
+=======
+guid: 497759f574e331b4f8c9d38846594e30
+>>>>>>> Stashed changes:Assets/Tripulantes/CartaAtivo.prefab.meta
 PrefabImporter:
   externalObjects: {}
   userData: 
