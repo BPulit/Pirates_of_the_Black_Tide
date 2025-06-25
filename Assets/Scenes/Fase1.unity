@@ -6981,7 +6981,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   painelCartasHUD: {fileID: 541893153}
-  prefabCartaTripulante: {fileID: 2760199296484617340, guid: ca638893c6a9c9147a688134d7c3e581, type: 3}
+  prefabCartaTripulante: {fileID: 2760199296484617340, guid: 8632fc3aca2178a448038e89245dd906, type: 3}
 --- !u!222 &756443910
 CanvasRenderer:
   m_ObjectHideFlags: 0
