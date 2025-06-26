@@ -37,6 +37,7 @@ public class PlayerXpManage : MonoBehaviour
         xpAtual -= xpParaProximoNivel;
         nivel++;
         AudioManager.Instance.TocarSomEfeito(17);
+        OverlayEffect.Instance.MostrarLevelUp();
         xpParaProximoNivel += 10;
 
         

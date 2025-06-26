@@ -66,7 +66,7 @@ public class StatusPlayer : MonoBehaviour
         }
 
         vidaAtual -= dano;
-        Object.FindFirstObjectByType<OverlayEffect>()?.MostrarDano();
+        OverlayEffect.Instance.MostrarDano();
 
 
         vidaAtual = Mathf.Max(vidaAtual, 0);
@@ -80,6 +80,7 @@ public class StatusPlayer : MonoBehaviour
     {
         vidaAtual = Mathf.Min(vidaAtual + quantidade, vidaMaxima);
         AtualizarUI(true); // em cura, atualiza as duas barras juntas
+        OverlayEffect.Instance.MostrarCura();
     }
 
     public void AtualizarUI(bool forcarAmbas)

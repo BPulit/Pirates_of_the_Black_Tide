@@ -82,6 +82,7 @@ public class PauseManager : MonoBehaviour
 
     public void VoltarMenu()
     {
+        TogglePause();
         SceneManager.LoadScene("MenuInicial");
     }
 }

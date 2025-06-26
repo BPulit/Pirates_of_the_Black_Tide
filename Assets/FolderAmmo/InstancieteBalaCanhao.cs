@@ -40,13 +40,13 @@ public class InstancieteBalaCanhao : MonoBehaviour
         if (leftCooldown > 0f) leftCooldown -= Time.deltaTime;
         if (rightCooldown > 0f) rightCooldown -= Time.deltaTime;
 
-        if (Input.GetMouseButtonDown(0) && leftCooldown <= 0f)
+        if (Input.GetMouseButtonDown(0) && leftCooldown <= 0f && Time.timeScale > 0f)
         {
             StartCoroutine(DispararCanhoesComDelay(canhoesEsquerdos, -transform.right));
             leftCooldown = cooldownTime;
         }
 
-        if (Input.GetMouseButtonDown(1) && rightCooldown <= 0f)
+        if (Input.GetMouseButtonDown(1) && rightCooldown <= 0f && Time.timeScale > 0f)
         {
             StartCoroutine(DispararCanhoesComDelay(canhoesDireitos, transform.right));
             rightCooldown = cooldownTime;
