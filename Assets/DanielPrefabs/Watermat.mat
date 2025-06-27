@@ -135,14 +135,14 @@ Material:
     - _WaveSpeed: 0
     - _WorkflowMode: 1
     - _ZWrite: 1
-    - _waveAmplitude: 0.03
+    - _waveAmplitude: 0
     m_Colors:
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
-    - _DeepColor: {r: 0.10123708, g: 0.16970037, b: 0.8584906, a: 0}
+    - _DeepColor: {r: 0.101960726, g: 0.42599723, b: 0.85882354, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _ShallowColor: {r: 0, g: 0.12682945, b: 0.1882353, a: 0}
+    - _ShallowColor: {r: 0, g: 0.20817137, b: 0.2641509, a: 1}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
-    - _Specualrcolors: {r: 0.058823526, g: 0.20222202, b: 0.28235295, a: 0}
+    - _Specualrcolors: {r: 0.058823474, g: 0.20222196, b: 0.2823529, a: 1}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
