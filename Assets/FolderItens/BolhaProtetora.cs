@@ -10,17 +10,26 @@ public class BolhaProtetora : MonoBehaviour
     private Renderer rend;
     private Color corOriginal;
     private Material materialInstanciado;
+    private Coroutine ciclo;
 
     void Start()
     {
         rend = GetComponent<Renderer>();
-
-        // Instancia material para não alterar o original
         materialInstanciado = rend.material;
         corOriginal = materialInstanciado.color;
 
-        // Inicia ciclo de vida da bolha
-        StartCoroutine(CicloBolha());
+        // Inicia ciclo
+        ciclo = StartCoroutine(CicloBolha());
+    }
+
+    public void ReiniciarDuracao(float novaDuracao)
+    {
+        duracao = novaDuracao;
+
+        if (ciclo != null)
+            StopCoroutine(ciclo);
+
+        ciclo = StartCoroutine(CicloBolha());
     }
 
     IEnumerator CicloBolha()
@@ -31,11 +40,14 @@ public class BolhaProtetora : MonoBehaviour
         while (tempo < tempoPiscando)
         {
             tempo += Time.deltaTime;
-            float alpha = Mathf.Abs(Mathf.Sin(Time.time * velocidadePiscar)); // pisca entre 0 e 1
+            float alpha = Mathf.Abs(Mathf.Sin(Time.time * velocidadePiscar));
             Color novaCor = new Color(corOriginal.r, corOriginal.g, corOriginal.b, alpha);
             materialInstanciado.color = novaCor;
             yield return null;
         }
+
+        if (StatusPlayer.Instance != null && StatusPlayer.Instance.bolhaAtual == this.gameObject)
+            StatusPlayer.Instance.bolhaAtual = null;
 
         Destroy(gameObject);
     }

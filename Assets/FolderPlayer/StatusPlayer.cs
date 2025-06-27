@@ -13,6 +13,8 @@ public class StatusPlayer : MonoBehaviour
     public float velocidade = 5f;
     public int ataque = 10;
     public bool invulneravel = false;
+    public GameObject prefabBolha;
+     public GameObject bolhaAtual;
 
     [Header("Referências UI")]
     public TextMeshProUGUI vidasTexto;

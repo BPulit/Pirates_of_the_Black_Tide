@@ -1,9 +1,14 @@
 fileFormatVersion: 2
-guid: 239fb50681324674581ea9f36517e399
+guid: bd9d8c5a3b832c347a590a9b6ec26251
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: WoodenChestMat
+    second: {fileID: 2100000, guid: af6c9f10c9b97da4c977ad0ab0510b3c, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

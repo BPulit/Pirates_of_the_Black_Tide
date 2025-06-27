@@ -9,14 +9,9 @@ public class TripulanteCiborgue : Tripulante
 
     public override void AtivarHabilidade(GameObject jogador)
     {
-        Transform pontoSpawn = jogador.transform;
-        GameObject bolha = GameObject.Instantiate(prefabBolha, pontoSpawn.position, Quaternion.identity);
-         AudioManager.Instance.TocarSomEfeito(8);
-        bolha.transform.SetParent(jogador.transform);
-        bolha.layer = LayerMask.NameToLayer("Protecao");
-
-        BolhaProtetora script = bolha.GetComponent<BolhaProtetora>();
-        script.duracao = tempoProtecao;
+        AudioManager.Instance.TocarSomEfeito(8);
+        BolhaUtil.AtivarBolha(jogador, prefabBolha, tempoProtecao);
     }
+
 }
 

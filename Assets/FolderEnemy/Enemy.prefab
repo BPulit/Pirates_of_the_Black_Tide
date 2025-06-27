@@ -378,6 +378,9 @@ MonoBehaviour:
   maxMoedas: 3
   itensPossiveis:
   - {fileID: 1253162247643659479, guid: a7b13d7888b77a84db5c0ed7d051161b, type: 3}
+  - {fileID: 2792000550772804565, guid: 21c48b4c33a7d5549b8c501c7b29939c, type: 3}
+  - {fileID: 4935901451866062599, guid: 8995390d1a656a645a1fbbc497bb95d8, type: 3}
+  - {fileID: 8928841093090810680, guid: d0bbbc8865ce9c641b1e81528bfd937f, type: 3}
   chanceDropItem: 1
 --- !u!114 &7947219554878580474
 MonoBehaviour:

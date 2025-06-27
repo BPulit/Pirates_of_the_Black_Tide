@@ -753,6 +753,8 @@ MonoBehaviour:
   velocidade: 90
   ataque: 5
   invulneravel: 0
+  prefabBolha: {fileID: 4935901451866062599, guid: 9f0392921bc04dd4799806d4f5ca2368, type: 3}
+  bolhaAtual: {fileID: 0}
   vidasTexto: {fileID: 0}
   sliderVidaInstantanea: {fileID: 0}
   sliderVidaDelay: {fileID: 0}

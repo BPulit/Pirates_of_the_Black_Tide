@@ -58,4 +58,14 @@ public class PlayerCapitaoControlador : MonoBehaviour
             }
         }
     }
+    public void AplicarBoostVelocidade(float duracao, float multVel, float multRot)
+    {
+        if (!invulneravel) // se não for o Capitão ativo
+        {
+            playerMove.multiplicadorVelocidade = multVel;
+            playerMove.multiplicadorRotacao = multRot;
+        }
+
+        tempoRestante += duracao; // acumula tempo se já estiver ativo
+    }
 }
