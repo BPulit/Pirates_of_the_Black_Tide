@@ -114,6 +114,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GaivotaRig
       objectReference: {fileID: 0}
+    - target: {fileID: 1454619133592375848, guid: 6c672fd3da0a3da4e8eaccbd535f354e, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 68f5d9a377e77ae4d82edb8faedbd98d, type: 2}
     - target: {fileID: 8879528566716807029, guid: 6c672fd3da0a3da4e8eaccbd535f354e, type: 3}
       propertyPath: m_LocalPosition.y
       value: 0.0176
