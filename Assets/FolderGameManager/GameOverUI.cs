@@ -15,9 +15,9 @@ public class GameOverUI : MonoBehaviour
         int navios = PlayerPrefs.GetInt("naviosDestruidos", 0);
         int boss = PlayerPrefs.GetInt("bossDerrotados", 0);
 
-        textoNivel.text = " " + nivel;
-        textoNavios.text = " " + navios;
-        textoBoss.text = " " + boss;
+        textoNivel.text = nivel.ToString();
+        textoNavios.text = navios.ToString();
+        textoBoss.text = boss.ToString();
     }
     public void VoltarAoMenu()
     {
@@ -26,12 +26,17 @@ public class GameOverUI : MonoBehaviour
         PlayerPrefs.DeleteKey("bossDerrotados");
         SceneManager.LoadScene("MenuInicial");
     }
-    public void JogarNovamente()
-    {
-        PlayerPrefs.DeleteKey("naviosDestruidos");
-        PlayerPrefs.DeleteKey("nivel");
-        PlayerPrefs.DeleteKey("bossDerrotados");
-        SceneManager.LoadScene("Fase1");
-    }
+   public void JogarNovamente()
+{
+    string cenaParaCarregar = PlayerPrefs.GetString("ultimaCenaJogada", "Fase1"); // fallback para "Fase1"
+    
+    PlayerPrefs.DeleteKey("naviosDestruidos");
+    PlayerPrefs.DeleteKey("nivel");
+    PlayerPrefs.DeleteKey("bossDerrotados");
+    PlayerPrefs.DeleteKey("ultimaCenaJogada");
+
+    SceneManager.LoadScene(cenaParaCarregar);
+}
+
 
 }

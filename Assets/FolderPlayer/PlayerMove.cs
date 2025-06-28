@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections.Generic;
 
 public class PlayerMove : MonoBehaviour
 {
@@ -16,7 +17,9 @@ public class PlayerMove : MonoBehaviour
 
     [Header("Modo orbital (boss)")]
     public bool modoOrbital = false;
-    public Transform centroDaArena;
+    public List<Transform> centrosDaArena = new();
+    private Transform centroAtual;
+
     public float raioArena = 30f;
 
     public float velocidadeAngular = 30f;
@@ -39,13 +42,13 @@ public class PlayerMove : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (modoOrbital && centroDaArena == null)
+        if (modoOrbital && centrosDaArena == null)
         {
             modoOrbital = false;
             if (rb.isKinematic) rb.isKinematic = false;
         }
 
-        if (modoOrbital && centroDaArena != null)
+        if (modoOrbital && centrosDaArena != null)
         {
             if (!rb.isKinematic) rb.isKinematic = true;
             MoverNoModoOrbital();
@@ -114,17 +117,26 @@ public class PlayerMove : MonoBehaviour
             velocidadeAtual = Mathf.Min(velocidadeAtual + aceleracao * Time.deltaTime, velocidadeMaxima);
         }
 
-        transform.RotateAround(centroDaArena.position, Vector3.up, velocidadeFinal * Time.deltaTime);
+        if (centroAtual == null)
+        {
+            modoOrbital = false;
+            return;
+        }
 
-        Vector3 direcaoCentro = (transform.position - centroDaArena.position).normalized;
-        transform.position = centroDaArena.position + direcaoCentro * raioArena;
+        transform.RotateAround(centroAtual.position, Vector3.up, velocidadeFinal * Time.deltaTime);
+
+        Vector3 direcaoCentro = (transform.position - centroAtual.position).normalized;
+        transform.position = centroAtual.position + direcaoCentro * raioArena;
 
         transform.rotation = Quaternion.LookRotation(Vector3.Cross(Vector3.up, direcaoCentro));
     }
 
     public void AtivarModoOrbital(Transform centro)
     {
-        centroDaArena = centro;
+        if (!centrosDaArena.Contains(centro))
+            centrosDaArena.Add(centro);
+
+        centroAtual = centro;
         modoOrbital = true;
 
         Vector3 direcaoInicial = (transform.position - centro.position).normalized;
@@ -132,6 +144,7 @@ public class PlayerMove : MonoBehaviour
 
         if (!rb.isKinematic) rb.isKinematic = true;
     }
+
 
     private void OnCollisionEnter(Collision collision)
     {
@@ -144,4 +157,27 @@ public class PlayerMove : MonoBehaviour
             rb.AddForce(awayDirection.normalized * repulsionForce, ForceMode.Impulse);
         }
     }
+    public void DesativarModoOrbital()
+    {
+        modoOrbital = false;
+        centroAtual = null;
+
+        if (rb != null)
+            rb.isKinematic = false;
+    }
+    public Transform GetCentroAtual()
+    {
+        return centroAtual;
+    }
+    public void DestruirCentroAtual()
+    {
+        if (centroAtual != null)
+        {
+            Destroy(centroAtual.gameObject);
+            centroAtual = null;
+        }
+    }
+
+
+
 }

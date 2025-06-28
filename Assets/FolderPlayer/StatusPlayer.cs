@@ -112,6 +112,8 @@ public class StatusPlayer : MonoBehaviour
         PlayerPrefs.SetInt("nivel", PlayerXpManage.instance.nivel);
         PlayerPrefs.SetInt("naviosDestruidos", CurrencyManager.instance.GetNaviosDestruidos());
         PlayerPrefs.SetInt("bossDerrotados", CurrencyManager.instance.GetBossDerrotados());
+        PlayerPrefs.SetString("ultimaCenaJogada", UnityEngine.SceneManagement.SceneManager.GetActiveScene().name);
+
         PlayerPrefs.Save();
 
         SceneManager.LoadScene("Derrota");

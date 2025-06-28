@@ -44,6 +44,11 @@ public class BolaDeCanhao : MonoBehaviour
             {
                 kraken.TakeDamage(dano);
             }
+            SeaMonsterStatus seaMonster = collision.gameObject.GetComponent<SeaMonsterStatus>();
+            if (seaMonster != null)
+            {
+                seaMonster.TomarDano(dano);
+            }
         }
 
         if (shooterTag == "Inimigo")

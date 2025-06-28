@@ -2370,12 +2370,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   alvo: {fileID: 453755646435953424}
-  offsetLocal: {x: 0, y: 147, z: -150}
   suavizacao: 2
+  offsetLocal: {x: 0, y: 147, z: -150}
   anguloVertical: 30
-  offsetBoss: {x: 150, y: 450, z: 0}
-  anguloBoss: 70
-  tempoTransicao: 12
+  distanciaOrbital: -611
+  alturaOrbital: 239
+  anguloHorizontal: 399
 --- !u!1 &2920935878323951994
 GameObject:
   m_ObjectHideFlags: 0
@@ -5811,7 +5811,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   vidaMaxima: 100
   vidaAtual: 100
-  velocidade: 120
+  velocidade: 400
   ataque: 5
   invulneravel: 0
   prefabBolha: {fileID: 4935901451866062599, guid: 9f0392921bc04dd4799806d4f5ca2368, type: 3}
@@ -5839,12 +5839,14 @@ MonoBehaviour:
   tiltSmooth: 5
   repulsionForce: 200
   modoOrbital: 0
-  centroDaArena: {fileID: 0}
-  raioArena: 300
-  velocidadeAngular: 20
-  velocidadeAtual: 10
-  velocidadeMinima: 10
-  velocidadeMaxima: 20
+  centrosDaArena:
+  - {fileID: 0}
+  - {fileID: 0}
+  raioArena: 420
+  velocidadeAngular: 15
+  velocidadeAtual: 8
+  velocidadeMinima: 5
+  velocidadeMaxima: 10
   aceleracao: 10
   suavizacaoAltura: 2
   multiplicadorVelocidade: 1
@@ -5869,7 +5871,7 @@ MonoBehaviour:
   - {fileID: 2920935878323951994}
   - {fileID: 1193260574178751153}
   shootForce: 600
-  cooldownTime: 1.5
+  cooldownTime: 0
   intervaloEntreCanhoes: 0.2
   spawnOffset: 10
   vfxLifetime: 2
@@ -5914,7 +5916,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b86656c653cc88e4ba78e2b5a1efba66, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nivel: 1
+  nivel: 6
   xpAtual: 0
   xpParaProximoNivel: 5
   barraXP: {fileID: 0}

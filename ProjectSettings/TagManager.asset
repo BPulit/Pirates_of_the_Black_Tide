@@ -18,6 +18,12 @@ TagManager:
   - Boss
   - Raio
   - Bolha
+  - BarreiraKraken
+  - ZonaKraken
+  - ArenaCenterKraken
+  - BarreiraSeaMonster
+  - ZonaSeaMonster
+  - ArenaCenterSeaMonster
   layers:
   - Default
   - TransparentFX
