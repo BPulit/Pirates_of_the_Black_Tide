@@ -7,6 +7,8 @@ public class PlayerInventory : MonoBehaviour
 
     [Header("Itens Possuídos")]
     public List<ItemLoja> ownedItems = new List<ItemLoja>();
+    public List<GameObject> velasVisuais = new(); // Atribuir no Inspetor
+    private int nivelVelocidade = 0;
 
     private void Awake()
     {
@@ -32,8 +34,17 @@ public class PlayerInventory : MonoBehaviour
 
     public void AumentarVelocidade(float valor)
     {
-        StatusPlayer.Instance.velocidade += valor;
-        MensagemUI.instance.MostrarMensagem($"Velocidade aumentada em {valor}. Nova velocidade: {StatusPlayer.Instance.velocidade}");
+        // Só aumenta se ainda houver velas para mostrar
+        if (nivelVelocidade < velasVisuais.Count)
+        {
+            StatusPlayer.Instance.velocidade += valor;
+            nivelVelocidade++; // Aumenta nível
+            AtualizarVelasVisuais();
+        }
+        else
+        {
+            Debug.Log("Velocidade já está no nível máximo de velas.");
+        }
     }
 
     public void AumentarAtaque(int valor)
@@ -41,6 +52,14 @@ public class PlayerInventory : MonoBehaviour
         StatusPlayer.Instance.ataque += valor;
         MensagemUI.instance.MostrarMensagem($"Ataque aumentado em {valor}. Novo ataque: {StatusPlayer.Instance.ataque}");
     }
+   private void AtualizarVelasVisuais()
+    {
+        for (int i = 0; i < velasVisuais.Count; i++)
+        {
+            velasVisuais[i].SetActive(i < nivelVelocidade);
+        }
+    }
+
 
     public int GetGold()
     {

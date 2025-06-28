@@ -17,7 +17,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &7373880836475890375
 Transform:
   m_ObjectHideFlags: 0
@@ -3019,7 +3019,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &255119620041899995
 Transform:
   m_ObjectHideFlags: 0
@@ -5542,7 +5542,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &5550821737642783629
 Transform:
   m_ObjectHideFlags: 0
@@ -5811,7 +5811,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   vidaMaxima: 100
   vidaAtual: 100
-  velocidade: 400
+  velocidade: 100
   ataque: 5
   invulneravel: 0
   prefabBolha: {fileID: 4935901451866062599, guid: 9f0392921bc04dd4799806d4f5ca2368, type: 3}
@@ -5819,7 +5819,7 @@ MonoBehaviour:
   vidasTexto: {fileID: 0}
   sliderVidaInstantanea: {fileID: 0}
   sliderVidaDelay: {fileID: 0}
-  velocidadeDelay: 0.2
+  velocidadeDelay: 0.25
 --- !u!114 &5883719070950481258
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5904,6 +5904,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ownedItems: []
+  velasVisuais:
+  - {fileID: 3782401513207507910}
+  - {fileID: 35426898229152003}
+  - {fileID: 6137374414719081649}
 --- !u!114 &751901590236594392
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5916,7 +5920,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b86656c653cc88e4ba78e2b5a1efba66, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nivel: 6
+  nivel: 1
   xpAtual: 0
   xpParaProximoNivel: 5
   barraXP: {fileID: 0}

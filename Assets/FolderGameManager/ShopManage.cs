@@ -23,16 +23,15 @@ public class ShopManager : MonoBehaviour
         return;
     }
 
-    if (PlayerInventory.Instance.GetGold() >= item.preco)
+   if (PlayerInventory.Instance.GetGold() >= item.preco)
     {
         CurrencyManager.instance.GastarMoedas(item.preco);
-        PlayerInventory.Instance.AddItem(item);
-        item.AplicarEfeito();
+        PlayerInventory.Instance.AddItem(item); // Já aplica o efeito dentro desse método
 
-        //  Remove da loja e da UI
-            itensDisponiveis.Remove(item);
+        itensDisponiveis.Remove(item);
         MostrarItensNaUI(); // Atualiza os botões da loja
     }
+
     else
     {
         MensagemUI.instance.MostrarMensagem("Ouro insuficiente para comprar: " + item.nomeItem);
