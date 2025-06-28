@@ -3,6 +3,10 @@ using UnityEngine;
 public class NotaMusical : MonoBehaviour
 {
     public int dano = 3;
+    private void Start()
+    {
+        Destroy(gameObject, 40f);
+    }
 
     void OnTriggerEnter(Collider other)
     {

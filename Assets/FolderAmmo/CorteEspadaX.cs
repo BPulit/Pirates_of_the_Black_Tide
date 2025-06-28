@@ -4,6 +4,11 @@ public class CorteEspadaX : MonoBehaviour
 {
     public int dano = 5;
 
+    private void Start()
+    {
+        Destroy(gameObject, 20f);
+    }
+
     void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Inimigo"))

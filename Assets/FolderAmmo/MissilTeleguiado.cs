@@ -4,7 +4,7 @@ public class MissilTeleguiado : MonoBehaviour
 {
     public float velocidade = 40f;
     public float rotacao = 20f;
-    public float tempoDeVida = 15f;
+    public float tempoDeVida = 30f;
     public int dano = 10;
     public GameObject efeitoExplosao;
 

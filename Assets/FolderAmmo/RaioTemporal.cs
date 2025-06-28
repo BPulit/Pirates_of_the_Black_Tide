@@ -63,6 +63,6 @@ public class RaioTemporal : MonoBehaviour
     this.duracao = duracaoRaio;
 
     // Gira entre 80 e 130 graus por segundo
-    this.velocidadeRotacao = Random.Range(180f, 200f);
+    this.velocidadeRotacao = Random.Range(500f, 600f);
 }
 }
