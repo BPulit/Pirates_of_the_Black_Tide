@@ -56945,7 +56945,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 770188433441610101, guid: f13bc7dfb6a97e4449bb6a57df71e398, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -150
+      value: -160
       objectReference: {fileID: 0}
     - target: {fileID: 770188433441610101, guid: f13bc7dfb6a97e4449bb6a57df71e398, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -56962,6 +56962,30 @@ PrefabInstance:
     - target: {fileID: 1870158578961718096, guid: f13bc7dfb6a97e4449bb6a57df71e398, type: 3}
       propertyPath: m_Name
       value: ItenUi
+      objectReference: {fileID: 0}
+    - target: {fileID: 3153203192064928340, guid: f13bc7dfb6a97e4449bb6a57df71e398, type: 3}
+      propertyPath: m_Transition
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3153203192064928340, guid: f13bc7dfb6a97e4449bb6a57df71e398, type: 3}
+      propertyPath: m_Navigation.m_Mode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3153203192064928340, guid: f13bc7dfb6a97e4449bb6a57df71e398, type: 3}
+      propertyPath: m_Colors.m_ColorMultiplier
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3153203192064928340, guid: f13bc7dfb6a97e4449bb6a57df71e398, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3153203192064928340, guid: f13bc7dfb6a97e4449bb6a57df71e398, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3153203192064928340, guid: f13bc7dfb6a97e4449bb6a57df71e398, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
