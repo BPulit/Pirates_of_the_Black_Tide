@@ -5,7 +5,12 @@ public class Moeda : MonoBehaviour
     public int valor = 1;            // Quantidade de moedas que essa moeda vale
     public float velocidadeRotacao = 90f; // Graus por segundo
  
+        private void Start()
+    {
 
+        Destroy(gameObject, 40f);
+    
+    }
     void Update()
     {
         // Faz a moeda girar no eixo Y (verticalmente)

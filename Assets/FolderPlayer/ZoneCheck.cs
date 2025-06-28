@@ -17,6 +17,8 @@ public class ZoneCheck : MonoBehaviour
 
     private bool nivelAtingido = false;
     private bool bossAtivo = false;
+    [Header("UI")]
+    public GameObject imagemBossAviso;
 
     void Start()
     {
@@ -30,6 +32,9 @@ public class ZoneCheck : MonoBehaviour
             if (PlayerXpManage.instance.nivel >= 6)
             {
                 nivelAtingido = true;
+                if (imagemBossAviso != null)
+                imagemBossAviso.SetActive(true);
+
                 
                 Debug.Log("Atingiu o nível 6! Inimigos comuns sumiram. Vá para o centro da arena.");
 
@@ -50,6 +55,8 @@ public class ZoneCheck : MonoBehaviour
         if (!nivelAtingido || bossAtivo) return;
 
         bossAtivo = true;
+        if (imagemBossAviso != null)
+        imagemBossAviso.SetActive(false);
 
         if (krakenInstanciado == null && krakenPrefab != null && centroArena != null)
         {

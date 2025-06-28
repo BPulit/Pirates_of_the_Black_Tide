@@ -7,6 +7,13 @@ public enum tipoItem{Cura, Bolha, Velocidade}
 public tipoItem tipoDoItem = tipoItem.Cura;
 public string colisionTag;
 
+        private void Start()
+    {
+
+        Destroy(gameObject, 40f);
+    
+    }
+
     void OnTriggerEnter(Collider other)
     {
         if (!other.gameObject.CompareTag(colisionTag))

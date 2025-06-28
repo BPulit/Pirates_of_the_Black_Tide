@@ -50,7 +50,7 @@ MonoBehaviour:
   tempoTrocaDirecao: 2
   peixeDeCardume: 0
   centroArea: {x: 0, y: -10, z: 0}
-  raioMaximo: 1600
+  raioMaximo: 2000
 --- !u!1001 &4286805111550178027
 PrefabInstance:
   m_ObjectHideFlags: 0

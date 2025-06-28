@@ -319,7 +319,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25a333a999d227a4aa61dbc95be9888e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 4569350731372571574, guid: 0cbc611fbd8f6b147ac669ed86957a4f, type: 3}
+  player: {fileID: 3647172711768667599, guid: c2fc6970bc57bbe4c8c201b1dee7b232, type: 3}
   distanciaFlanqueamento: 25
   distanciaMinima: 10
   lateralOffset: 15

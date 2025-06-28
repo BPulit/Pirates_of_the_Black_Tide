@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 786149949017636963}
-  - component: {fileID: 5089484916884128340}
+  - component: {fileID: -6301215292889803942}
   m_Layer: 0
   m_Name: AguaViva
   m_TagString: Untagged
@@ -27,13 +27,13 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 1416.6603, y: 52.922165, z: -1271.6194}
-  m_LocalScale: {x: 1.2122, y: 1.2122, z: 1.2122}
+  m_LocalScale: {x: 4.630968, y: 4.630968, z: 4.630968}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 77863739623544367}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &5089484916884128340
+--- !u!114 &-6301215292889803942
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -45,12 +45,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 932f40b7f18f2f74b92faaaba261b5c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocidade: 15
+  velocidade: 10
   variacaoDirecao: 20
-  tempoTrocaDirecao: 200
+  tempoTrocaDirecao: 2
   peixeDeCardume: 0
   centroArea: {x: 0, y: 0, z: 0}
-  raioMaximo: 1500
+  raioMaximo: 2000
 --- !u!1001 &476847016984998340
 PrefabInstance:
   m_ObjectHideFlags: 0

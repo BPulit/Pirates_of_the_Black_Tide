@@ -4,6 +4,12 @@ public class Bau : MonoBehaviour
 {
     public int quantidadeMoedas = 30;
 
+    private void Start()
+    {
+
+        Destroy(gameObject, 40f);
+    
+    }
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
@@ -13,4 +19,5 @@ public class Bau : MonoBehaviour
             Destroy(gameObject);
         }
     }
+    
 }
