@@ -3,7 +3,37 @@ guid: 5fd74d5f996e0e84daa30266c328bd40
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.001
+    second: {fileID: 2100000, guid: 4ae57fa7b02aff249803678f288fce1f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.005
+    second: {fileID: 2100000, guid: 1515da0edf3694545a04a32273230554, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.006
+    second: {fileID: 2100000, guid: 593b8da674a19174a8f6c4c612a5f7cd, type: 2}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Coconuts
+    second: {fileID: 2800000, guid: 761a949b71be1a646a182b4b7d9a3510, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: PalmLeaves
+    second: {fileID: 2800000, guid: 7357f62ff792e414ab61ae78a04347b6, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: PalmTree
+    second: {fileID: 2800000, guid: 31498bdb6c2a1bc4ab04095c66f9bf7d, type: 3}
   materials:
     materialImportMode: 2
     materialName: 0
