@@ -14828,6 +14828,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 194979325284510429, guid: c2fc6970bc57bbe4c8c201b1dee7b232, type: 3}
+      propertyPath: velocidade
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 194979325284510429, guid: c2fc6970bc57bbe4c8c201b1dee7b232, type: 3}
       propertyPath: sliderVidaDelay
       value: 
       objectReference: {fileID: 1446154715}
@@ -14851,9 +14855,21 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3182433665825385942, guid: c2fc6970bc57bbe4c8c201b1dee7b232, type: 3}
+      propertyPath: alturaOrbital
+      value: 266
+      objectReference: {fileID: 0}
+    - target: {fileID: 3182433665825385942, guid: c2fc6970bc57bbe4c8c201b1dee7b232, type: 3}
+      propertyPath: anguloHorizontal
+      value: 470
+      objectReference: {fileID: 0}
+    - target: {fileID: 3182433665825385942, guid: c2fc6970bc57bbe4c8c201b1dee7b232, type: 3}
+      propertyPath: distanciaOrbital
+      value: -504
+      objectReference: {fileID: 0}
     - target: {fileID: 3647172711768667599, guid: c2fc6970bc57bbe4c8c201b1dee7b232, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1024
+      value: -485
       objectReference: {fileID: 0}
     - target: {fileID: 3647172711768667599, guid: c2fc6970bc57bbe4c8c201b1dee7b232, type: 3}
       propertyPath: m_LocalPosition.y
@@ -14890,6 +14906,10 @@ PrefabInstance:
     - target: {fileID: 3647172711768667599, guid: c2fc6970bc57bbe4c8c201b1dee7b232, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5883719070950481258, guid: c2fc6970bc57bbe4c8c201b1dee7b232, type: 3}
+      propertyPath: raioArena
+      value: 400
       objectReference: {fileID: 0}
     - target: {fileID: 5883719070950481258, guid: c2fc6970bc57bbe4c8c201b1dee7b232, type: 3}
       propertyPath: 'centrosDaArena.Array.data[0]'
@@ -51270,6 +51290,6 @@ SceneRoots:
   - {fileID: 1197802677}
   - {fileID: 1477653897}
   - {fileID: 1280257536}
+  - {fileID: 876905117}
   - {fileID: 995145223}
   - {fileID: 589603464}
-  - {fileID: 876905117}
