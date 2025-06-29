@@ -942,6 +942,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   vidaMaxima: 10
+  valueXp: 5
   playerMove: {fileID: 0}
   cameraFollow: {fileID: 0}
   barreiraArena: {fileID: 0}

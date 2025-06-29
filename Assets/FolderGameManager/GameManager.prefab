@@ -14550,6 +14550,7 @@ GameObject:
   - component: {fileID: 7820985066351470734}
   - component: {fileID: 8673990019365525497}
   - component: {fileID: 6952420727716902537}
+  - component: {fileID: 1969840558069040683}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -14689,7 +14690,7 @@ MonoBehaviour:
   - nomeItem: "Refor\xE7o Nivel 1"
     preco: 3
     descricao: yyyyyyyyyyy
-    icone: {fileID: 0}
+    icone: {fileID: 21300000, guid: 601e030c5fbb9f744bce55c6ebd9efcb, type: 3}
     tipoItem: 0
     quantidadeCura: 5
     aumentoVelocidade: 0
@@ -14705,7 +14706,7 @@ MonoBehaviour:
   - nomeItem: "Refor\xE7o Nivel 2"
     preco: 4
     descricao: yyyyyyyyyyy
-    icone: {fileID: 0}
+    icone: {fileID: 21300000, guid: 2e043886cd2a4924eb9b33ee2365fefd, type: 3}
     tipoItem: 0
     quantidadeCura: 50
     aumentoVelocidade: 0
@@ -14729,7 +14730,7 @@ MonoBehaviour:
   - nomeItem: "Refor\xE7o Nivel 3"
     preco: 5
     descricao: yyyyyyyyyyy
-    icone: {fileID: 0}
+    icone: {fileID: 21300000, guid: 1a62f7e9dd15bda4ebb2ac68e53e4cd2, type: 3}
     tipoItem: 0
     quantidadeCura: 100
     aumentoVelocidade: 0
@@ -14765,3 +14766,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   textoMoedas: {fileID: 0}
+--- !u!114 &1969840558069040683
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5095640667747857871}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8bae91095e36fb4e8f5c9e3ae6c6efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  barraDeVida: {fileID: 0}

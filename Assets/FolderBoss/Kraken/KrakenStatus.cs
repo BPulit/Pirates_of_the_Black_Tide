@@ -6,6 +6,8 @@ public class KrakenStatus : MonoBehaviour
     public int vidaMaxima = 10;
     private int vidaAtual;
 
+    public int valueXp;
+
     [Header("Referências externas")]
     public PlayerMove playerMove;
     public CameraFollow cameraFollow;
@@ -69,11 +71,11 @@ public class KrakenStatus : MonoBehaviour
     Debug.Log("Morrendo...");
 
     MensagemUI.instance?.MostrarMensagem("Parabens voce matou o kraken!");
-
+    PlayerXpManage.instance.GanharXP(valueXp);
     if (playerMove != null)
     {
         playerMove.DesativarModoOrbital();
-
+        
         Transform centro = playerMove.GetCentroAtual();
         if (centro != null)
         {

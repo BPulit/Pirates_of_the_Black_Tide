@@ -117,6 +117,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   vidaMaxima: 12
+  valueXp: 5
   playerMove: {fileID: 0}
   barreiraArena: {fileID: 0}
   zonaBoss: {fileID: 0}

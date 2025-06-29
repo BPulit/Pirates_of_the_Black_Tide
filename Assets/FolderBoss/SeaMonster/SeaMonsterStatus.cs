@@ -6,6 +6,7 @@ public class SeaMonsterStatus : MonoBehaviour
 {
     public int vidaMaxima = 12;
     private int vidaAtual;
+    public int valueXp;
     private bool estaMorrendo = false;
 
     [Header("Referências")]
@@ -19,8 +20,12 @@ public class SeaMonsterStatus : MonoBehaviour
     void Start()
     {
         vidaAtual = vidaMaxima;
+
+        if (SeaMonsterHealthUI.instance != null)
+            SeaMonsterHealthUI.instance.Inicializar(vidaMaxima);
+            
          if (playerMove == null)
-        playerMove = Object.FindFirstObjectByType<PlayerMove>();
+            playerMove = Object.FindFirstObjectByType<PlayerMove>();
 
         if (cameraFollow == null)
             cameraFollow = Object.FindFirstObjectByType<CameraFollow>();
@@ -46,7 +51,10 @@ public class SeaMonsterStatus : MonoBehaviour
 
         vidaAtual -= dano;
         Debug.Log("SeaMonster tomou dano: " + vidaAtual);
-
+         if (SeaMonsterHealthUI.instance != null)
+        {
+            SeaMonsterHealthUI.instance.AtualizarVida(vidaAtual);
+        }
         if (vidaAtual <= 0)
             StartCoroutine(Morrer());
     }
@@ -54,18 +62,20 @@ public class SeaMonsterStatus : MonoBehaviour
     IEnumerator Morrer()
 {
     estaMorrendo = true;
+    PlayerXpManage.instance.GanharXP(valueXp);
 
     if (playerMove != null)
-    {
-        playerMove.DesativarModoOrbital();
-        playerMove.DestruirCentroAtual();
+        {
+            playerMove.DesativarModoOrbital();
+            playerMove.DestruirCentroAtual();
 
-        Rigidbody rb = playerMove.GetComponent<Rigidbody>();
-        if (rb != null) rb.isKinematic = false;
-    }
+            Rigidbody rb = playerMove.GetComponent<Rigidbody>();
+            if (rb != null) rb.isKinematic = false;
+        }
+    
 
     if (cameraFollow != null)
-        cameraFollow.VoltarCameraNormal();
+            cameraFollow.VoltarCameraNormal();
 
     // Toca animação com tempo de espera mais confiável
     yield return StartCoroutine(MorrerEBloquear());
