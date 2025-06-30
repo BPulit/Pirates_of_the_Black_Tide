@@ -27,8 +27,8 @@ Transform:
   m_GameObject: {fileID: 7718049488334743268}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 156.12091, y: 45.4, z: 462.59998}
-  m_LocalScale: {x: 3.0658696, y: 31.532667, z: 3.0658696}
+  m_LocalPosition: {x: 158.05, y: 45.4, z: 461.73}
+  m_LocalScale: {x: 12.333687, y: 126.85277, z: 12.333687}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 8089262291388642136}
@@ -70,7 +70,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   velocidadeDescida: 10
-  velocidadeRotacao: 1000
 --- !u!1001 &8631267761736373427
 PrefabInstance:
   m_ObjectHideFlags: 0

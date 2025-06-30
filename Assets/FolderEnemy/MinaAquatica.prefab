@@ -28,8 +28,8 @@ Transform:
   m_GameObject: {fileID: 1845203783026345930}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.28678, y: 0, z: 0.32997}
-  m_LocalScale: {x: 2.2522, y: 2.2522, z: 2.2522}
+  m_LocalPosition: {x: 0.55312, y: 0, z: 0.63642}
+  m_LocalScale: {x: 3.4152358, y: 3.4152358, z: 3.4152358}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 9125672871591487413}
@@ -98,6 +98,8 @@ MonoBehaviour:
   dano: 20
   vfxExplosao: {fileID: 4544093511871096023, guid: d9635d2790730964b9f22b5f7b8bda29, type: 3}
   tempoParaDestruirVFX: 2
+  amplitude: 0.8
+  velocidadeOscilacao: 1.4
 --- !u!1001 &8732020481195786334
 PrefabInstance:
   m_ObjectHideFlags: 0

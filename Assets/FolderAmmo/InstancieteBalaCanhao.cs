@@ -23,6 +23,7 @@ public class InstancieteBalaCanhao : MonoBehaviour
     private float leftCooldown = 0f;
     private float rightCooldown = 0f;
     public float spawnOffset = 1f;
+    [Range(0f, 1f)] public float inclinacaoFrontal = 0.4f;
     [Header("UI de Cooldown")]
     public Slider sliderCooldownEsquerda;
     public Slider sliderCooldownDireita;
@@ -125,7 +126,8 @@ public class InstancieteBalaCanhao : MonoBehaviour
             GameObject bala = Instantiate(balaPrefab, spawnPos, Quaternion.identity);
 
             Rigidbody rb = bala.GetComponent<Rigidbody>();
-            rb.AddForce(direcao.normalized * shootForce);
+            Vector3 direcaoAngulada = (direcao + transform.forward * inclinacaoFrontal).normalized;
+            rb.AddForce(direcaoAngulada * shootForce);
 
             var script = bala.GetComponent<BolaDeCanhao>();
             if (script != null)

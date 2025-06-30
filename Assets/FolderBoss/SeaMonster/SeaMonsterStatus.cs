@@ -16,10 +16,13 @@ public class SeaMonsterStatus : MonoBehaviour
     public Animator animator;
     public EnemySpawner spawner;
     public CameraFollow cameraFollow;
+    public SeaMonsterAnimatorControl animControl;
 
     void Start()
     {
         vidaAtual = vidaMaxima;
+        if (animControl == null)
+        animControl = GetComponent<SeaMonsterAnimatorControl>();
 
         if (SeaMonsterHealthUI.instance != null)
             SeaMonsterHealthUI.instance.Inicializar(vidaMaxima);
@@ -97,17 +100,14 @@ public class SeaMonsterStatus : MonoBehaviour
     SceneManager.LoadScene("Vitoria");
 }
 
-IEnumerator MorrerEBloquear()
-{
-    if (animator != null)
+    IEnumerator MorrerEBloquear()
     {
-        animator.Play("SeaMonsterDie"); // ou "Death" se esse for o nome certo
-        yield return new WaitForSeconds(animator.GetCurrentAnimatorStateInfo(0).length);
+        if (animator != null)
+        {
+            animControl.Morrer();
+            yield return new WaitForSeconds(5f); // fallback
+        }
     }
-    else
-    {
-        yield return new WaitForSeconds(5f);
-    }
-}
+
 
 }

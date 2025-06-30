@@ -38,8 +38,9 @@ public class CongelarInimigo : MonoBehaviour
         // Para inimigos com NavMeshAgent
         if (agente != null)
             agente.isStopped = true;
-            atirador.congelado = true;
 
+        if (atirador != null)
+            atirador.congelado = true;
 
         // Para Kraken com script de movimento próprio
         if (krakenControl != null)
@@ -57,6 +58,8 @@ public class CongelarInimigo : MonoBehaviour
         // Volta ao normal
         if (agente != null)
             agente.isStopped = false;
+
+        if (atirador != null)
             atirador.congelado = false;
 
         if (krakenControl != null)
@@ -70,4 +73,5 @@ public class CongelarInimigo : MonoBehaviour
 
         estaCongelado = false;
     }
+
 }

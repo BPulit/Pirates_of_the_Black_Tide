@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nome: The fish man
   idUnico: tritao
-  icone: {fileID: 0}
+  icone: {fileID: 21300000, guid: 8deca207fc33fd4418755ef99bdc0911, type: 3}
   cooldown: 60
   descricao: 'Create waves on the sides of the boat that sweep the sea and destroy
     enemies. Cooldown: 60s'

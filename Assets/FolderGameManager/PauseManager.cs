@@ -65,7 +65,7 @@ public class PauseManager : MonoBehaviour
         painelTripAtivo.SetActive(!isPaused);
         pausePanel.SetActive(isPaused);
         Time.timeScale = isPaused ? 0f : 1f;
-        AudioListener.pause = isPaused;
+       // AudioListener.pause = isPaused;
     }
 
     public void SetVolume(string parametro, float valor)
