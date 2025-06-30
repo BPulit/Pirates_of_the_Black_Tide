@@ -25,20 +25,25 @@ public class OndaTritao : MonoBehaviour
             Destroy(gameObject);
     }
 
-    private void OnTriggerEnter(Collider other)
+   private void OnTriggerEnter(Collider other)
+{
+    var enemy = other.GetComponentInParent<StatusEnemie>();
+    if (enemy != null)
     {
-        if (other.CompareTag("Inimigo"))
-        {
-            StatusEnemie inimigo = other.GetComponent<StatusEnemie>();
-            if (inimigo != null)
-                inimigo.TakeDamage(dano);
-        }
-
-        if (other.CompareTag("Boss"))
-        {
-            KrakenStatus kraken = other.GetComponent<KrakenStatus>();
-            if (kraken != null)
-                kraken.TakeDamage(dano);
-        }
+        enemy.TakeDamage(dano);
     }
+
+    var kraken = other.GetComponentInParent<KrakenStatus>();
+    if (kraken != null)
+    {
+        kraken.TakeDamage(dano);
+    }
+
+    var seaMonster = other.GetComponentInParent<SeaMonsterStatus>();
+    if (seaMonster != null)
+    {
+        Debug.Log("Acertou SeaMonster!");
+        seaMonster.TomarDano(dano);
+    }
+}
 }

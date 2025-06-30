@@ -95,7 +95,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5c5b653e1454d146a6f8b977d2f1a40, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dano: 1
+  dano: 20
   vfxExplosao: {fileID: 4544093511871096023, guid: d9635d2790730964b9f22b5f7b8bda29, type: 3}
   tempoParaDestruirVFX: 2
 --- !u!1001 &8732020481195786334

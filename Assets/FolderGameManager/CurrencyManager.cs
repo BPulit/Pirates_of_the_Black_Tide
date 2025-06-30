@@ -45,7 +45,7 @@ public class CurrencyManager : MonoBehaviour
     {
         if (textoMoedas != null)
         {
-            textoMoedas.text = "Moedas: " + moedas.ToString();
+            textoMoedas.text = moedas.ToString();
         }
     }
 

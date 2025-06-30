@@ -37,11 +37,7 @@ public class ZoneCheckKraken : MonoBehaviour
     void AtivarAvisoBoss()
     {
         avisoBoss?.SetActive(true);
-        spawner?.DestruirInimigosAtivos();
-        if (spawner != null)
-        {
-            spawner.spawnAtivo = false;
-        }
+       
     }
 
     void OnTriggerEnter(Collider other)
@@ -49,7 +45,9 @@ public class ZoneCheckKraken : MonoBehaviour
         if (!other.CompareTag("Player") || bossAtivado || !BossManager.instance.PodeAtivarBoss()) return;
 
         if (PlayerXpManage.instance.nivel < nivelMinimo) return;
-
+        spawner?.DestruirInimigosAtivos();
+        spawner.spawnAtivo = false;
+        
         bossAtivado = true;
         BossManager.instance.AtivarBoss();
 

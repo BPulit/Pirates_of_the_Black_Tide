@@ -9,9 +9,7 @@ public class TripulanteBomba : Tripulante
     public override void AtivarHabilidade(GameObject jogador)
     {
         base.AtivarHabilidade(jogador);
-        Debug.Log("Tripulante Bomba ativado");
-
-        // Pega inimigos normais e boss
+        
         Transform[] inimigos = GameObject.FindGameObjectsWithTag("Inimigo")
             .Concat(GameObject.FindGameObjectsWithTag("Boss"))
             .Select(go => go.transform)
@@ -20,7 +18,7 @@ public class TripulanteBomba : Tripulante
 
         if (inimigos.Length == 0)
         {
-            Debug.LogWarning("Nenhum inimigo ou boss encontrado para mirar com os mísseis.");
+            MensagemUI.instance?.MostrarMensagem("Nenhum inimigo ou boss encontrado para mirar com os mísseis.");
             return;
         }
 

@@ -20,6 +20,6 @@ MonoBehaviour:
     enemies. Cooldown: 40s'
   prefabRaio: {fileID: 7718049488334743268, guid: 18f1dee956992b84e9141b30ed0e2cba, type: 3}
   quantidadeDeRaios: 12
-  raioDoCirculo: 100
+  raioDoCirculo: 400
   duracaoRaio: 7
   danoPorSegundo: 2

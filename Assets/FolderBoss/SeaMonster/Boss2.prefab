@@ -47,14 +47,14 @@ GameObject:
   - component: {fileID: 7327719280249462376}
   - component: {fileID: 3722478928964712352}
   - component: {fileID: 7728495060950535633}
-  - component: {fileID: 8087283544165505112}
+  - component: {fileID: 2919810683543763020}
   m_Layer: 0
   m_Name: CanvasKrakenX
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &569616445257040193
 RectTransform:
   m_ObjectHideFlags: 0
@@ -64,15 +64,15 @@ RectTransform:
   m_GameObject: {fileID: 1620397815840873048}
   m_LocalRotation: {x: 0, y: -0.8424221, z: -0, w: -0.5388182}
   m_LocalPosition: {x: 0, y: 0, z: -310.9}
-  m_LocalScale: {x: 0.077964514, y: 0.11193884, z: 0.3186968}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 0.05384385, y: 0.077307194, z: 0.22009836}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 4411826011798958469}
   m_Father: {fileID: 9175244189025197911}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: -143.6, y: 84}
+  m_AnchoredPosition: {x: -143.6, y: 109}
   m_SizeDelta: {x: 1920, y: 1080}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &7327719280249462376
@@ -138,7 +138,7 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
---- !u!114 &8087283544165505112
+--- !u!114 &2919810683543763020
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -147,7 +147,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1620397815840873048}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8c9aa07e93bd11c4a8eb05d62be10895, type: 3}
+  m_Script: {fileID: 11500000, guid: 68fbb356601078841b9aab3c3466c56f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &2157740672331824159
@@ -450,7 +450,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7034876557462900655, guid: 55cc171ba61eeb0478b324387b93db14, type: 3}
       propertyPath: m_LocalScale.y
-      value: 3.0922167
+      value: 4.0458565
       objectReference: {fileID: 0}
     - target: {fileID: 7034876557462900655, guid: 55cc171ba61eeb0478b324387b93db14, type: 3}
       propertyPath: m_LocalScale.z
@@ -462,7 +462,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7034876557462900655, guid: 55cc171ba61eeb0478b324387b93db14, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -90
+      value: -132
       objectReference: {fileID: 0}
     - target: {fileID: 7034876557462900655, guid: 55cc171ba61eeb0478b324387b93db14, type: 3}
       propertyPath: m_LocalPosition.z

@@ -37,13 +37,15 @@ public class KrakenStatus : MonoBehaviour
 
     if (zonaBoss == null)
         zonaBoss = GameObject.FindWithTag("ZonaKraken");
+        
+        GameObject centro = GameObject.FindGameObjectWithTag("ArenaCenterKraken");
 
     if (spawner == null)
-    {
-        GameObject spawnerObj = GameObject.FindGameObjectWithTag("EnemySpawner");
-        if (spawnerObj != null)
-            spawner = spawnerObj.GetComponent<EnemySpawner>();
-    }
+        {
+            GameObject spawnerObj = GameObject.FindGameObjectWithTag("EnemySpawner");
+            if (spawnerObj != null)
+                spawner = spawnerObj.GetComponent<EnemySpawner>();
+        }
 }
 
 

@@ -12,6 +12,7 @@ public class EnemyShot : MonoBehaviour
     public float spawnOffset = 1f;
 
     private Transform player;
+    [HideInInspector] public bool congelado = false;
 
     void Start()
     {
@@ -20,8 +21,9 @@ public class EnemyShot : MonoBehaviour
 
     void Update()
     {
+        if (congelado || player == null) return;
+
         if (cooldown > 0f) cooldown -= Time.deltaTime;
-        if (player == null) return;
 
         float distance = Vector3.Distance(transform.position, player.position);
 

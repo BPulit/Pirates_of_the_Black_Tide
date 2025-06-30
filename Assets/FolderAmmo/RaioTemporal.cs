@@ -49,11 +49,17 @@ public class RaioTemporal : MonoBehaviour
                 enemy.TakeDamage(Mathf.CeilToInt(danoPorSegundo * Time.deltaTime));
             }
 
-            var boss = other.GetComponent<KrakenStatus>();
-            if (boss != null)
+            var kraken = other.GetComponent<KrakenStatus>();
+            if (kraken != null)
             {
-                boss.TakeDamage(Mathf.CeilToInt(danoPorSegundo * Time.deltaTime));
+                kraken.TakeDamage(Mathf.CeilToInt(danoPorSegundo * Time.deltaTime));
             }
+            var seaMonster = other.GetComponent<SeaMonsterStatus>();
+            if (kraken != null)
+            {
+                seaMonster.TomarDano(Mathf.CeilToInt(danoPorSegundo * Time.deltaTime));
+            }
+            
         }
     }
 

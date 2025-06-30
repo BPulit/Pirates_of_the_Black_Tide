@@ -18,11 +18,11 @@ public class StatusPlayer : MonoBehaviour
 
     [Header("Referências UI")]
     public TextMeshProUGUI vidasTexto;
-    public Slider sliderVidaInstantanea; // barra vermelha (vida atual)
-    public Slider sliderVidaDelay;       // barra preta transparente (atraso visual)
+    public Slider sliderVidaInstantanea; 
+    public Slider sliderVidaDelay;       
 
     [Header("Velocidade do Delay")]
-    public float velocidadeDelay = 1f; // velocidade que a barra preta chega até a vermelha
+    public float velocidadeDelay = 1f; 
 
     private void Awake()
     {
@@ -32,7 +32,7 @@ public class StatusPlayer : MonoBehaviour
 
     private void Start()
     {
-        // Busca o texto se não tiver arrastado
+        
         if (vidasTexto == null)
         {
             GameObject textoVida = GameObject.Find("NumeroVidas");
@@ -40,12 +40,12 @@ public class StatusPlayer : MonoBehaviour
                 vidasTexto = textoVida.GetComponent<TextMeshProUGUI>();
         }
 
-        AtualizarUI(true); // força atualizar de início
+        AtualizarUI(true); 
     }
 
     private void Update()
     {
-        // Atualiza gradualmente a barra delay para "alcançar" a barra principal
+        
         if (sliderVidaDelay != null && sliderVidaInstantanea != null)
         {
             if (sliderVidaDelay.value > sliderVidaInstantanea.value)
@@ -63,7 +63,7 @@ public class StatusPlayer : MonoBehaviour
     {
         if (invulneravel)
         {
-            Debug.Log("Dano ignorado: jogador está invulnerável");
+            MensagemUI.instance?.MostrarMensagem("Dano ignorado: jogador está invulnerável");
             return;
         }
 
@@ -81,7 +81,7 @@ public class StatusPlayer : MonoBehaviour
     public void Curar(int quantidade)
     {
         vidaAtual = Mathf.Min(vidaAtual + quantidade, vidaMaxima);
-        AtualizarUI(true); // em cura, atualiza as duas barras juntas
+        AtualizarUI(true); 
         OverlayEffect.Instance.MostrarCura();
     }
 
@@ -101,9 +101,9 @@ public class StatusPlayer : MonoBehaviour
             sliderVidaDelay.maxValue = vidaMaxima;
             if (forcarAmbas)
             {
-                sliderVidaDelay.value = vidaAtual; // cura instantânea
+                sliderVidaDelay.value = vidaAtual; 
             }
-            // caso contrário (em dano), deixa o delay rolar no Update
+            
         }
     }
 

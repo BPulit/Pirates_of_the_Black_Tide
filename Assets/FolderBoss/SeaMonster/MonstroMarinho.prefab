@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8380311303025854157}
   m_Layer: 0
   m_Name: HitboxCabeca
-  m_TagString: Untagged
+  m_TagString: Boss
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -52,8 +52,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.08135583, y: 0.46175405, z: 0.09674769}
-  m_Center: {x: 0.006699787, y: 0.04418624, z: -0.00038019}
+  m_Size: {x: 0.08135583, y: 0.46175405, z: 0.18322171}
+  m_Center: {x: 0.006699786, y: 0.044186495, z: -0.004188092}
 --- !u!114 &8380311303025854157
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -81,6 +81,7 @@ GameObject:
   - component: {fileID: 3674975864867645840}
   - component: {fileID: 5975219518567256633}
   - component: {fileID: 6902508455918122930}
+  - component: {fileID: 1021246593232162909}
   m_Layer: 0
   m_Name: MonstroMarinho
   m_TagString: Boss
@@ -201,6 +202,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 0}
+--- !u!114 &1021246593232162909
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2604381832645270223}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8d61b798cfad6f4f9ddec6efef3b99c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7977402737626784710
 GameObject:
   m_ObjectHideFlags: 0
@@ -214,7 +227,7 @@ GameObject:
   - component: {fileID: 9104036519111503259}
   m_Layer: 0
   m_Name: HitboxCalda
-  m_TagString: Untagged
+  m_TagString: Boss
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -253,8 +266,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.048419073, y: 0.11683417, z: 0.08130867}
-  m_Center: {x: 0.0028746652, y: 0.023304043, z: -0.019244928}
+  m_Size: {x: 0.0468726, y: 0.11683417, z: 0.061195828}
+  m_Center: {x: 0.0036479004, y: 0.023304045, z: -0.0091885}
 --- !u!114 &9104036519111503259
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -316,9 +329,25 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7396489120965119587, guid: aec804b081530d4409ec6fde433a508c, type: 3}
+      propertyPath: m_TagString
+      value: Boss
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: aec804b081530d4409ec6fde433a508c, type: 3}
       propertyPath: m_Name
       value: SeaMonster
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: aec804b081530d4409ec6fde433a508c, type: 3}
+      propertyPath: m_TagString
+      value: Boss
+      objectReference: {fileID: 0}
+    - target: {fileID: 5041642189053188718, guid: aec804b081530d4409ec6fde433a508c, type: 3}
+      propertyPath: m_TagString
+      value: Boss
+      objectReference: {fileID: 0}
+    - target: {fileID: 7921349508533355527, guid: aec804b081530d4409ec6fde433a508c, type: 3}
+      propertyPath: m_TagString
+      value: Boss
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:

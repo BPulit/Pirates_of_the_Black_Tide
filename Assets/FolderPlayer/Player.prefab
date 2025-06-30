@@ -2370,12 +2370,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   alvo: {fileID: 453755646435953424}
-  suavizacao: 2
-  offsetLocal: {x: 0, y: 147, z: -150}
-  anguloVertical: 30
-  distanciaOrbital: -611
-  alturaOrbital: 239
-  anguloHorizontal: 399
+  suavizacao: 1
+  offsetLocal: {x: 0, y: 110, z: -161}
+  anguloVertical: 21
+  distanciaOrbital: -504
+  alturaOrbital: 266
+  anguloHorizontal: 470
 --- !u!1 &2920935878323951994
 GameObject:
   m_ObjectHideFlags: 0
@@ -5811,7 +5811,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   vidaMaxima: 100
   vidaAtual: 100
-  velocidade: 100
+  velocidade: 150
   ataque: 5
   invulneravel: 0
   prefabBolha: {fileID: 4935901451866062599, guid: 9f0392921bc04dd4799806d4f5ca2368, type: 3}
@@ -5842,7 +5842,7 @@ MonoBehaviour:
   centrosDaArena:
   - {fileID: 0}
   - {fileID: 0}
-  raioArena: 420
+  raioArena: 400
   velocidadeAngular: 15
   velocidadeAtual: 8
   velocidadeMinima: 5
@@ -5871,9 +5871,11 @@ MonoBehaviour:
   - {fileID: 2920935878323951994}
   - {fileID: 1193260574178751153}
   shootForce: 600
-  cooldownTime: 0
+  cooldownTime: 0.8
   intervaloEntreCanhoes: 0.2
   spawnOffset: 10
+  sliderCooldownEsquerda: {fileID: 0}
+  sliderCooldownDireita: {fileID: 0}
   vfxLifetime: 2
 --- !u!208 &6389782105939201034
 NavMeshObstacle:

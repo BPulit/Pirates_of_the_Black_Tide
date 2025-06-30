@@ -18,4 +18,4 @@ MonoBehaviour:
   cooldown: 60
   descricao: 'Creates a shield that protects the ship from attack. Cooldown: 60s'
   prefabBolha: {fileID: 4935901451866062599, guid: 9f0392921bc04dd4799806d4f5ca2368, type: 3}
-  tempoProtecao: 5
+  tempoProtecao: 30

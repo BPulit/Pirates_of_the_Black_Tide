@@ -27,6 +27,9 @@ public class PlayerMove : MonoBehaviour
     public float velocidadeMinima = 10f;
     public float velocidadeMaxima = 30f;
     public float aceleracao = 10f;
+    private bool querMover = false;
+    private bool querParar = false;
+
 
     [Header("Flutuação")]
     public float suavizacaoAltura = 2f;
@@ -39,16 +42,37 @@ public class PlayerMove : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
     }
-
-    void FixedUpdate()
+    void Update()
+{
+    // Comando para mover
+    if (Input.GetKeyDown(KeyCode.W))
     {
-        if (modoOrbital && centrosDaArena == null)
+        querMover = true;
+    }
+
+    // Comando para parar
+    if (Input.GetKeyDown(KeyCode.S))
+    {
+        // Só toca som se o barco estiver se movendo
+        if (rb.linearVelocity.magnitude > 0.5f)
+        {
+            AudioManager.Instance.TocarSomEfeito(6);
+        }
+
+        querParar = true;
+    }
+}
+
+
+        void FixedUpdate()
+    {
+        if (modoOrbital && centrosDaArena.Count == 0)
         {
             modoOrbital = false;
             if (rb.isKinematic) rb.isKinematic = false;
         }
 
-        if (modoOrbital && centrosDaArena != null)
+        if (modoOrbital)
         {
             if (!rb.isKinematic) rb.isKinematic = true;
             MoverNoModoOrbital();
@@ -60,14 +84,19 @@ public class PlayerMove : MonoBehaviour
         }
     }
 
-    void MoverNormal()
-    {
-        if (Input.GetKeyDown(KeyCode.W)) engineOn = true;
 
-        if (Input.GetKeyDown(KeyCode.S))
+        void MoverNormal()
+    {
+        if (querMover)
+        {
+            engineOn = true;
+            querMover = false;
+        }
+
+        if (querParar)
         {
             engineOn = false;
-            AudioManager.Instance.TocarSomEfeito(6);
+            querParar = false;
         }
 
         if (engineOn)

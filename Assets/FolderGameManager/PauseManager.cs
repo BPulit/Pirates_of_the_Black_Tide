@@ -23,6 +23,18 @@ public class PauseManager : MonoBehaviour
         pausePanel.SetActive(false);
         painelTripAtivo.SetActive(true);
         fullScreenToggle.isOn = Screen.fullScreen;
+        Screen.fullScreen = PlayerPrefs.GetInt("fullscreen", 1) == 1;
+
+        sliderGeral.value = PlayerPrefs.GetFloat("masterVol", 0.7f);
+        sliderMusica.value = PlayerPrefs.GetFloat("musicVol", 0.7f);
+        sliderSFX.value = PlayerPrefs.GetFloat("sfxVol", 0.7f);
+        sliderNatureza.value = PlayerPrefs.GetFloat("natureVol", 0.7f);
+
+        // Aplica os volumes carregados
+        SetVolume("masterVol", sliderGeral.value);
+        SetVolume("musicVol", sliderMusica.value);
+        SetVolume("sfxVol", sliderSFX.value);
+        SetVolume("natureVol", sliderNatureza.value);
 
         // Inicializa sliders com valores de 0.0001 a 1, convertendo dB pra valor linear
         sliderGeral.value = GetLinearVolume("masterVol");
@@ -63,6 +75,7 @@ public class PauseManager : MonoBehaviour
 
         float dB = Mathf.Log10(valor) * 20f;
         mixer.SetFloat(parametro, dB);
+        PlayerPrefs.SetFloat(parametro, valor);
     }
 
     public void SetVolumeGeral(float value) => SetVolume("masterVol", sliderGeral.value);
@@ -73,6 +86,7 @@ public class PauseManager : MonoBehaviour
     public void SetFullScreen(bool isFull)
     {
         Screen.fullScreen = isFull;
+        PlayerPrefs.SetInt("fullscreen", isFull ? 1 : 0);
     }
     public void VoltarJogo()
     {

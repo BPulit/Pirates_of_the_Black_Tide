@@ -62,7 +62,9 @@ public class SeaMonsterStatus : MonoBehaviour
     IEnumerator Morrer()
 {
     estaMorrendo = true;
+    MensagemUI.instance?.MostrarMensagem("Parabens voce matou o Sea Monster!");
     PlayerXpManage.instance.GanharXP(valueXp);
+    yield return StartCoroutine(MorrerEBloquear());
 
     if (playerMove != null)
         {
@@ -78,7 +80,8 @@ public class SeaMonsterStatus : MonoBehaviour
             cameraFollow.VoltarCameraNormal();
 
     // Toca animação com tempo de espera mais confiável
-    yield return StartCoroutine(MorrerEBloquear());
+    
+        CurrencyManager.instance.IncrementarBossDerrotados();
         PlayerPrefs.SetInt("nivel", PlayerXpManage.instance.nivel);
         PlayerPrefs.SetInt("naviosDestruidos", CurrencyManager.instance.GetNaviosDestruidos());
         PlayerPrefs.SetInt("bossDerrotados", CurrencyManager.instance.GetBossDerrotados());
@@ -89,7 +92,7 @@ public class SeaMonsterStatus : MonoBehaviour
 
 
     BossManager.instance.FinalizarBoss();
-    CurrencyManager.instance.IncrementarBossDerrotados();
+    
 
     SceneManager.LoadScene("Vitoria");
 }
@@ -103,7 +106,7 @@ IEnumerator MorrerEBloquear()
     }
     else
     {
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(5f);
     }
 }
 

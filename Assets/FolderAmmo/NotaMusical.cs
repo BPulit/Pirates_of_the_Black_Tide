@@ -21,6 +21,11 @@ public class NotaMusical : MonoBehaviour
         {
             var kraken = other.GetComponent<KrakenStatus>();
             if (kraken != null) kraken.TakeDamage(dano);
+            
+            var seaMonster = other.GetComponent<SeaMonsterStatus>();
+            seaMonster.TomarDano(dano);
+
+            
             Destroy(gameObject);
         }
     }

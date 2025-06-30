@@ -10,15 +10,18 @@ public class BossKrakenControler : MonoBehaviour
     public float intervaloEntreAtaques = 3f;
 
     private bool podeGirar = true;
+    private bool estaCongelado = false;
+
+    private Coroutine cicloAtaqueCoroutine;
 
     void Start()
     {
-        StartCoroutine(CicloDeAtaque());
+        cicloAtaqueCoroutine = StartCoroutine(CicloDeAtaque());
     }
 
     void Update()
     {
-        if (podeGirar)
+        if (podeGirar && !estaCongelado)
         {
             transform.Rotate(Vector3.up * velocidadeRotacao * Time.deltaTime);
         }
@@ -29,6 +32,8 @@ public class BossKrakenControler : MonoBehaviour
         while (true)
         {
             yield return new WaitForSeconds(intervaloEntreAtaques);
+
+            if (estaCongelado) continue;
 
             podeGirar = false;
 
@@ -50,7 +55,8 @@ public class BossKrakenControler : MonoBehaviour
         while (t < 1)
         {
             t += Time.deltaTime * 2;
-            tentaculo.localPosition = Vector3.Lerp(posOriginal, posAlvo, t);
+            if (!estaCongelado)
+                tentaculo.localPosition = Vector3.Lerp(posOriginal, posAlvo, t);
             yield return null;
         }
 
@@ -60,8 +66,23 @@ public class BossKrakenControler : MonoBehaviour
         while (t < 1)
         {
             t += Time.deltaTime * 2;
-            tentaculo.localPosition = Vector3.Lerp(posAlvo, posOriginal, t);
+            if (!estaCongelado)
+                tentaculo.localPosition = Vector3.Lerp(posAlvo, posOriginal, t);
             yield return null;
         }
     }
+
+    public void Congelar(float duracao)
+    {
+        if (!gameObject.activeInHierarchy) return;
+        StartCoroutine(CongelarCoroutine(duracao));
+    }
+
+    IEnumerator CongelarCoroutine(float duracao)
+    {
+        estaCongelado = true;
+        yield return new WaitForSeconds(duracao);
+        estaCongelado = false;
+    }
 }
+

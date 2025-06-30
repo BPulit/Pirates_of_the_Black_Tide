@@ -54,11 +54,17 @@ public class MissilTeleguiado : MonoBehaviour
             kraken.TakeDamage(dano);
             aplicouDano = true;
         }
+        var seaMonster = other.GetComponent<SeaMonsterStatus>();
+        if (seaMonster != null)
+        {
+            seaMonster.TomarDano(dano);
+            aplicouDano = true;
+        }
 
         if (aplicouDano && efeitoExplosao != null)
-        {
-            Instantiate(efeitoExplosao, transform.position, Quaternion.identity);
-        }
+            {
+                Instantiate(efeitoExplosao, transform.position, Quaternion.identity);
+            }
 
         if (aplicouDano)
         {
