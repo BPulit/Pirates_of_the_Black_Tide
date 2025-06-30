@@ -23,6 +23,8 @@ public class StatusPlayer : MonoBehaviour
 
     [Header("Velocidade do Delay")]
     public float velocidadeDelay = 1f; 
+    [Header("VFX")]
+    public GameObject vfxCuraPrefab;
 
     private void Awake()
     {
@@ -79,11 +81,20 @@ public class StatusPlayer : MonoBehaviour
     }
 
     public void Curar(int quantidade)
+{
+    vidaAtual = Mathf.Min(vidaAtual + quantidade, vidaMaxima);
+    AtualizarUI(true); 
+    OverlayEffect.Instance.MostrarCura();
+
+    // VFX de cura no barco
+    if (vfxCuraPrefab != null)
     {
-        vidaAtual = Mathf.Min(vidaAtual + quantidade, vidaMaxima);
-        AtualizarUI(true); 
-        OverlayEffect.Instance.MostrarCura();
+        GameObject vfx = Instantiate(vfxCuraPrefab, transform.position, Quaternion.identity);
+        vfx.transform.SetParent(transform); // Para seguir o barco se ele estiver se movendo
+        Destroy(vfx, 2f); // Destroi o VFX depois de 2 segundos
     }
+}
+
 
     public void AtualizarUI(bool forcarAmbas)
     {

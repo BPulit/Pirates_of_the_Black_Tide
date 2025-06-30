@@ -347,6 +347,7 @@ MonoBehaviour:
   cooldownTime: 1
   attackRange: 150
   spawnOffset: 3
+  congelado: 0
 --- !u!114 &7883753215836495144
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -382,6 +383,7 @@ MonoBehaviour:
   - {fileID: 4935901451866062599, guid: 8995390d1a656a645a1fbbc497bb95d8, type: 3}
   - {fileID: 8928841093090810680, guid: d0bbbc8865ce9c641b1e81528bfd937f, type: 3}
   chanceDropItem: 1
+  vfxItemDropPrefab: {fileID: 1193953125369175018, guid: 7d39067bead4bc14aa0b451564aa5198, type: 3}
 --- !u!114 &7947219554878580474
 MonoBehaviour:
   m_ObjectHideFlags: 0

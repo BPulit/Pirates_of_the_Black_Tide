@@ -152,3 +152,4 @@ MonoBehaviour:
   dano: 1
   shooterTag: 1
   shooterObject: {fileID: 0}
+  vfxExplosaoPrefab: {fileID: 5162910912013668194, guid: cf82839c411151342a7b2337bda9fb34, type: 3}

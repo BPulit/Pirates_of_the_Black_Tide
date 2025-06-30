@@ -36,9 +36,10 @@ public string colisionTag;
                 BolhaUtil.AtivarBolha(other.gameObject, StatusPlayer.Instance.prefabBolha, 5f); // Duração do item
                 break;
 
-            case tipoItem.Velocidade:
-                // efeito futuro
-                break;
+        }
+        foreach (Transform child in transform)
+        {
+            Destroy(child.gameObject);
         }
 
         Destroy(gameObject); // item some após coleta

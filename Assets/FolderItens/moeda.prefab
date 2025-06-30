@@ -16,7 +16,7 @@ GameObject:
   m_Layer: 0
   m_Name: moeda
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -122,8 +122,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a8f36798ac6604419f032ac1729237d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  valor: 1
+  valor: 2
   velocidadeRotacao: 90
+  vfxDropPrefab: {fileID: 1943286446490004412, guid: e953460ff16e0a6459684f9b77202b5c, type: 3}
 --- !u!1001 &2333970077531238799
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -150,7 +151,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: af8521ca976bbc44ab26a88e306819df, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 0.638
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: af8521ca976bbc44ab26a88e306819df, type: 3}
       propertyPath: m_LocalPosition.z

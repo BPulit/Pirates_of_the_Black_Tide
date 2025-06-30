@@ -7,7 +7,7 @@ EditorBuildSettings:
   m_Scenes:
   - enabled: 1
     path: Assets/Scenes/MenuInicial.unity
-    guid: 1f1a6b0f2be771a408b6afc55fb7a64f
+    guid: 4b4bacf12db7258478d0ea1296cfc52d
   - enabled: 1
     path: Assets/Scenes/Fase1.unity
     guid: 89b2baccf96df0d40b89fcb437450ca2
@@ -19,7 +19,7 @@ EditorBuildSettings:
     guid: 99c9720ab356a0642a771bea13969a05
   - enabled: 1
     path: Assets/Scenes/ModoInfinito.unity
-    guid: 4b97ddc5ae9e03b4a9511f161da93218
+    guid: a306a96c743b9f44597cb6cdd97f9753
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   m_UseUCBPForAssetBundles: 0

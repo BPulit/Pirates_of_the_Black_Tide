@@ -54,9 +54,9 @@ CapsuleCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 1.6022285
-  m_Height: 1
+  m_Height: 0.8397926
   m_Direction: 1
-  m_Center: {x: -0.18196605, y: 0, z: 0.107612535}
+  m_Center: {x: -0.18196605, y: 0.37064186, z: 0.10761252}
 --- !u!114 &48882588642013424
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -70,6 +70,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   velocidadeDescida: 10
+  tornadoVFXPrefab: {fileID: 7966731087305637596, guid: 460babe280fe4aa41adc3fefd46f0c0b, type: 3}
 --- !u!1001 &8631267761736373427
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -88,7 +89,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 9c976566b62b1d241b5984d269e7734c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.317
+      value: -0.033
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 9c976566b62b1d241b5984d269e7734c, type: 3}
       propertyPath: m_LocalPosition.z

@@ -18,6 +18,10 @@ public class ItemVelocidadeTemp : MonoBehaviour
             pc.AplicarBoostVelocidade(duracao, multiplicadorVelocidade, multiplicadorRotacao);
             AudioManager.Instance.TocarSomEfeito(indexSFX); 
         }
+        foreach (Transform child in transform)
+        {
+            Destroy(child.gameObject);
+        }
 
         Destroy(gameObject);
     }

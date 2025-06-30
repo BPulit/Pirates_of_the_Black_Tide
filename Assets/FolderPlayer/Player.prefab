@@ -2042,6 +2042,8 @@ MonoBehaviour:
   - {fileID: 8300000, guid: d758a4f7a7a630b44ae8a54db0cece22, type: 3}
   - {fileID: 8300000, guid: cfdd8155fb4055c4aa2322ebfecf1554, type: 3}
   - {fileID: 8300000, guid: a50f2097223049844af81298700c4487, type: 3}
+  - {fileID: 8300000, guid: 97282b611a1df114d8e361ac16fc26dc, type: 3}
+  - {fileID: 8300000, guid: f2bb7e0732a9b2e4889c65c843a1e88d, type: 3}
   natureza:
   - {fileID: 8300000, guid: 2877cbbbe92feca478dacf74c27f93f5, type: 3}
   - {fileID: 8300000, guid: 525863d934d41234f8fbf39c60a2785d, type: 3}
@@ -5820,6 +5822,7 @@ MonoBehaviour:
   sliderVidaInstantanea: {fileID: 0}
   sliderVidaDelay: {fileID: 0}
   velocidadeDelay: 0.25
+  vfxCuraPrefab: {fileID: 339158821923109191, guid: 108ca465382c11742bd2c91fe4fdb13f, type: 3}
 --- !u!114 &5883719070950481258
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5874,6 +5877,7 @@ MonoBehaviour:
   cooldownTime: 0.8
   intervaloEntreCanhoes: 0.2
   spawnOffset: 10
+  inclinacaoFrontal: 0.2
   sliderCooldownEsquerda: {fileID: 0}
   sliderCooldownDireita: {fileID: 0}
   vfxLifetime: 2
@@ -5943,6 +5947,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 128
   knockbackForce: 30
+  vfxHabilidadeCapitao: {fileID: 5749441552287667129, guid: ee71d8dfb36a7b048aef24b0bc8f9764, type: 3}
 --- !u!1 &6288818280491228123
 GameObject:
   m_ObjectHideFlags: 0

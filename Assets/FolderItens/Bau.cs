@@ -16,6 +16,10 @@ public class Bau : MonoBehaviour
         {
             CurrencyManager.instance.AdicionarMoedas(quantidadeMoedas);
             AudioManager.Instance.TocarSomEfeito(6); // som opcional
+            foreach (Transform child in transform)
+            {
+                Destroy(child.gameObject);
+            }
             Destroy(gameObject);
         }
     }

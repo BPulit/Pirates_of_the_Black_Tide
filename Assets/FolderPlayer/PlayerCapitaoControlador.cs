@@ -12,6 +12,10 @@ public class PlayerCapitaoControlador : MonoBehaviour
     public LayerMask layerInimigo;
     public float knockbackForce = 10f;
 
+    [Header("VFX")]
+    public GameObject vfxHabilidadeCapitao;
+    private GameObject vfxInstanciado;
+
     void Start()
     {
         playerMove = GetComponent<PlayerMove>();
@@ -28,8 +32,20 @@ public class PlayerCapitaoControlador : MonoBehaviour
             statusPlayer.invulneravel = true;
             invulneravel = true;
             tempoRestante = duracao;
+
+            // Instancia o VFX como filho do navio
+            if (vfxHabilidadeCapitao != null && vfxInstanciado == null)
+            {
+                vfxInstanciado = Instantiate(vfxHabilidadeCapitao, transform);
+                
+                // Define a posição atrás do barco
+                vfxInstanciado.transform.localPosition = new Vector3(0, 0, -2f); // ajuste o -2f conforme o tamanho do barco
+                vfxInstanciado.transform.localRotation = Quaternion.identity; // evita inclinar junto com rotação
+                vfxInstanciado.transform.localScale = Vector3.one; // evita deformações
+            }
         }
     }
+
 
     void Update()
     {
@@ -37,7 +53,7 @@ public class PlayerCapitaoControlador : MonoBehaviour
         {
             tempoRestante -= Time.deltaTime;
 
-            // Colisão com inimigos - aplica knockback
+            // Aplica knockback
             Collider[] inimigos = Physics.OverlapSphere(transform.position, 2f, layerInimigo);
             foreach (var inimigo in inimigos)
             {
@@ -49,23 +65,35 @@ public class PlayerCapitaoControlador : MonoBehaviour
                 }
             }
 
+            // Mantém VFX acompanhando o player (mas com rotação fixa)
+            if (vfxInstanciado != null)
+            {
+                vfxInstanciado.transform.position = transform.position;
+                vfxInstanciado.transform.rotation = Quaternion.Euler(0f, 180f, 0f);
+
+            }
+
             if (tempoRestante <= 0f)
             {
                 invulneravel = false;
                 statusPlayer.invulneravel = false;
                 playerMove.multiplicadorVelocidade = 1f;
                 playerMove.multiplicadorRotacao = 1f;
+
+                if (vfxInstanciado != null)
+                    Destroy(vfxInstanciado);
             }
         }
     }
+
     public void AplicarBoostVelocidade(float duracao, float multVel, float multRot)
     {
-        if (!invulneravel) // se não for o Capitão ativo
+        if (!invulneravel)
         {
             playerMove.multiplicadorVelocidade = multVel;
             playerMove.multiplicadorRotacao = multRot;
         }
 
-        tempoRestante += duracao; // acumula tempo se já estiver ativo
+        tempoRestante += duracao;
     }
 }

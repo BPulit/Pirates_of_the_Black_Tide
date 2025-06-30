@@ -4,9 +4,20 @@ public class CorteEspadaX : MonoBehaviour
 {
     public int dano = 5;
 
+    [Header("VFX")]
+    public GameObject vfxCortePrefab;
+
+    private GameObject vfxInstanciado;
+
     private void Start()
     {
-        Destroy(gameObject, 20f);
+        // Instancia o VFX de corte como filho do corte
+        if (vfxCortePrefab != null)
+        {
+            vfxInstanciado = Instantiate(vfxCortePrefab, transform.position, transform.rotation, transform);
+        }
+
+        Destroy(gameObject, 20f); // tempo de vida do corte (e do VFX, se for filho)
     }
 
     void OnTriggerEnter(Collider other)

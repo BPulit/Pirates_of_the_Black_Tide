@@ -96,6 +96,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dano: 10
+  vfxNotaPrefab: {fileID: 7626139322179216226, guid: dc33e45a4bb28854c941caca0629dcce, type: 3}
 --- !u!1001 &8795076623708706973
 PrefabInstance:
   m_ObjectHideFlags: 0
