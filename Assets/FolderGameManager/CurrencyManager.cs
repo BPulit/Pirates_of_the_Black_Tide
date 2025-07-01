@@ -22,6 +22,21 @@ public class CurrencyManager : MonoBehaviour
             Destroy(gameObject);
         }
     }
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.M))
+        {
+            CheatAdicionarMoedas(100);
+        }
+    }
+
+    void CheatAdicionarMoedas(int quantidade)
+    {
+        moedas += quantidade;
+        AtualizarHUD();
+        AudioManager.Instance?.TocarSomEfeito(1); // Som de índice 1
+        Debug.Log($"Cheat ativado: +{quantidade} moedas");
+    }
 
     public void AdicionarMoedas(int quantidade)
     {

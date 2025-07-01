@@ -2022,6 +2022,9 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 7d88697e25d37ba40aff7e435fa4eeae, type: 3}
   - {fileID: 8300000, guid: b15cfe2f80946f342994a0e474f6ebed, type: 3}
   - {fileID: 8300000, guid: 9ff0897d550ff844486293539ffb3c30, type: 3}
+  - {fileID: 8300000, guid: 6af18d4c714acd245bcc9d9581e85508, type: 3}
+  - {fileID: 8300000, guid: 82c39fbcbbb96cb418992a3ad25ddf59, type: 3}
+  - {fileID: 8300000, guid: 6e904a75624316247ab08a2301b56443, type: 3}
   efeitos:
   - {fileID: 8300000, guid: 1bc659bdba3d01445940e8a05997c2ea, type: 3}
   - {fileID: 8300000, guid: c5c804ecefb0b8e47be9090fad29a37e, type: 3}
@@ -2249,7 +2252,7 @@ Transform:
   m_GameObject: {fileID: 2908952537969802684}
   serializedVersion: 2
   m_LocalRotation: {x: 0.25881863, y: -0.000000029802322, z: -0, w: 0.965926}
-  m_LocalPosition: {x: 75.858, y: 195.70322, z: -543.6133}
+  m_LocalPosition: {x: 86, y: 457, z: -745}
   m_LocalScale: {x: 17.330704, y: 21.937166, z: 36.303326}
   m_ConstrainProportionsScale: 0
   m_Children:

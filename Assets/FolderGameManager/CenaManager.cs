@@ -16,14 +16,28 @@ public class CenaManager : MonoBehaviour
                 break;
 
             case "Fase1":
-                AudioManager.Instance.TocarMusica(0);
+                AudioManager.Instance.TocarMusica(2);
                 AudioManager.Instance.TocarSomNaturza(0);
                 AudioManager.Instance.TocarSomNaturza(1);
                 AudioManager.Instance.TocarSomNaturza(2);
                 break;
 
-            case "Modoinfinito":
-                AudioManager.Instance.TocarMusica(2);
+            case "ModoInfinito":
+                AudioManager.Instance.TocarMusica(3);
+                AudioManager.Instance.TocarSomNaturza(0);
+                AudioManager.Instance.TocarSomNaturza(1);
+                AudioManager.Instance.TocarSomNaturza(2);
+                break;
+
+                case "Derrota":
+                AudioManager.Instance.TocarMusica(5);
+                AudioManager.Instance.TocarSomNaturza(0);
+                AudioManager.Instance.TocarSomNaturza(1);
+                AudioManager.Instance.TocarSomNaturza(2);
+                break;
+
+                case "Vitoria":
+                AudioManager.Instance.TocarMusica(4);
                 AudioManager.Instance.TocarSomNaturza(0);
                 AudioManager.Instance.TocarSomNaturza(1);
                 AudioManager.Instance.TocarSomNaturza(2);

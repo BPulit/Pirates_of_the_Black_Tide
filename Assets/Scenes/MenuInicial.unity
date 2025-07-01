@@ -25497,7 +25497,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 312659298895988030}
-  - component: {fileID: 5739671785095068048}
+  - component: {fileID: 4762888538577297158}
   m_Layer: 0
   m_Name: AudioManager
   m_TagString: Untagged
@@ -25505,6 +25505,56 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &4762888538577297158
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4762888538577297157}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0c27bc6e884e744cacccaf342897cbc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mixer: {fileID: 24100000, guid: d3dea8773a2213d498604c4eb8fd6b87, type: 2}
+  musicSource: {fileID: 2839964705119853085}
+  sfxSource: {fileID: 3867700720996770770}
+  natureSource: {fileID: 5880891952523050989}
+  audioSource3DPrefab: {fileID: 3952397960949590027, guid: 33e0f4d8c549c6149a844b85a88c2a66, type: 3}
+  musicas:
+  - {fileID: 8300000, guid: 7d88697e25d37ba40aff7e435fa4eeae, type: 3}
+  - {fileID: 8300000, guid: b15cfe2f80946f342994a0e474f6ebed, type: 3}
+  - {fileID: 8300000, guid: 9ff0897d550ff844486293539ffb3c30, type: 3}
+  - {fileID: 8300000, guid: 6af18d4c714acd245bcc9d9581e85508, type: 3}
+  - {fileID: 8300000, guid: 82c39fbcbbb96cb418992a3ad25ddf59, type: 3}
+  - {fileID: 8300000, guid: 6e904a75624316247ab08a2301b56443, type: 3}
+  efeitos:
+  - {fileID: 8300000, guid: 1bc659bdba3d01445940e8a05997c2ea, type: 3}
+  - {fileID: 8300000, guid: c5c804ecefb0b8e47be9090fad29a37e, type: 3}
+  - {fileID: 8300000, guid: a743b6e1bced1824e8c058c10bb984c2, type: 3}
+  - {fileID: 8300000, guid: 5bd875276a9b8d2419fad6f7da9d1792, type: 3}
+  - {fileID: 8300000, guid: 729bf5bdbaf9c9542a906d74c7fc64f0, type: 3}
+  - {fileID: 8300000, guid: 73dec55d24b156d4b8e28e2d74afbd09, type: 3}
+  - {fileID: 8300000, guid: 8f06b339d850b304098aa272797cfecb, type: 3}
+  - {fileID: 8300000, guid: 64112c2248037f74aaff238929981dd5, type: 3}
+  - {fileID: 8300000, guid: 10a115f78ab102742a578643702b0433, type: 3}
+  - {fileID: 8300000, guid: ab389088d296ee444a4cbf9674941334, type: 3}
+  - {fileID: 8300000, guid: 1c516aedb020281498033155314e1444, type: 3}
+  - {fileID: 8300000, guid: b455348eeb61c8c49997aa034d090efc, type: 3}
+  - {fileID: 8300000, guid: 95194a30e580ed541bf79d641b19588e, type: 3}
+  - {fileID: 8300000, guid: 0e8109ed0662a74408a756147fd44f1d, type: 3}
+  - {fileID: 8300000, guid: 232289176c94da5428bb345b7308cacd, type: 3}
+  - {fileID: 8300000, guid: 4476f84d97b9d954b8a3f03be19ac312, type: 3}
+  - {fileID: 8300000, guid: d758a4f7a7a630b44ae8a54db0cece22, type: 3}
+  - {fileID: 8300000, guid: cfdd8155fb4055c4aa2322ebfecf1554, type: 3}
+  - {fileID: 8300000, guid: a50f2097223049844af81298700c4487, type: 3}
+  - {fileID: 8300000, guid: 97282b611a1df114d8e361ac16fc26dc, type: 3}
+  - {fileID: 8300000, guid: f2bb7e0732a9b2e4889c65c843a1e88d, type: 3}
+  natureza:
+  - {fileID: 8300000, guid: 2877cbbbe92feca478dacf74c27f93f5, type: 3}
+  - {fileID: 8300000, guid: 525863d934d41234f8fbf39c60a2785d, type: 3}
+  - {fileID: 8300000, guid: 63d52b916b002204696dd7721ae88b14, type: 3}
 --- !u!4 &5074394409282865210
 Transform:
   m_ObjectHideFlags: 0
@@ -25587,35 +25637,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &5739671785095068048
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4762888538577297157}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b0c27bc6e884e744cacccaf342897cbc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mixer: {fileID: 24100000, guid: d3dea8773a2213d498604c4eb8fd6b87, type: 2}
-  musicSource: {fileID: 2839964705119853085}
-  sfxSource: {fileID: 3867700720996770770}
-  natureSource: {fileID: 5880891952523050989}
-  audioSource3DPrefab: {fileID: 3952397960949590027, guid: 33e0f4d8c549c6149a844b85a88c2a66, type: 3}
-  musicas:
-  - {fileID: 8300000, guid: 7d88697e25d37ba40aff7e435fa4eeae, type: 3}
-  efeitos:
-  - {fileID: 8300000, guid: 1bc659bdba3d01445940e8a05997c2ea, type: 3}
-  - {fileID: 8300000, guid: c5c804ecefb0b8e47be9090fad29a37e, type: 3}
-  - {fileID: 8300000, guid: a743b6e1bced1824e8c058c10bb984c2, type: 3}
-  - {fileID: 8300000, guid: 97282b611a1df114d8e361ac16fc26dc, type: 3}
-  - {fileID: 8300000, guid: f2bb7e0732a9b2e4889c65c843a1e88d, type: 3}
-  natureza:
-  - {fileID: 8300000, guid: b39f60abcc993894693a407a951ec07e, type: 3}
-  - {fileID: 8300000, guid: 525863d934d41234f8fbf39c60a2785d, type: 3}
-  - {fileID: 8300000, guid: 63d52b916b002204696dd7721ae88b14, type: 3}
 --- !u!1 &5787012233339830334
 GameObject:
   m_ObjectHideFlags: 0
