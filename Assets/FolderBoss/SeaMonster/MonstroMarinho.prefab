@@ -117,8 +117,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3606837a6c811f141adb81a1bd8eef2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  vidaMaxima: 12
-  valueXp: 5
+  vidaMaxima: 1000
+  valueXp: 0
   playerMove: {fileID: 0}
   barreiraArena: {fileID: 0}
   zonaBoss: {fileID: 0}

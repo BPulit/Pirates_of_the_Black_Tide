@@ -67,7 +67,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e84bcfe30a2f00419746ca02cddf5c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  vfxOndaPrefab: {fileID: 4503612902121041701, guid: 5a936c83b1746f14f9100db745e94f04, type: 3}
+  vfxOndaPrefab: {fileID: 0}
 --- !u!1001 &6537782673586737196
 PrefabInstance:
   m_ObjectHideFlags: 0

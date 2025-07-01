@@ -15,7 +15,7 @@ MonoBehaviour:
   nome: The Shooter
   idUnico: missel
   icone: {fileID: 21300000, guid: e996ac90ea945a741a4fc86c177a3838, type: 3}
-  cooldown: 15
+  cooldown: 20
   descricao: 'Shoot two guided missiles that follow the closest enemies. Cooldown:
-    15s'
+    20s'
   missilPrefab: {fileID: 8053342427428182042, guid: 3146cf739c5f54845a6c06ba9d8c4ffd, type: 3}

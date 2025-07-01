@@ -5950,7 +5950,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 128
   knockbackForce: 40
-  vfxHabilidadeCapitao: {fileID: 5749441552287667129, guid: ee71d8dfb36a7b048aef24b0bc8f9764, type: 3}
+  vfxHabilidadeCapitao: {fileID: 0}
 --- !u!1 &6288818280491228123
 GameObject:
   m_ObjectHideFlags: 0
