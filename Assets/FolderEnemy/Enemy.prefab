@@ -295,11 +295,11 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: -1372625422
   m_Radius: 0.25
-  m_Speed: 20
-  m_Acceleration: 10
+  m_Speed: 40
+  m_Acceleration: 15
   avoidancePriority: 50
-  m_AngularSpeed: 120
-  m_StoppingDistance: 10
+  m_AngularSpeed: 100
+  m_StoppingDistance: 30
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1
@@ -320,8 +320,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 3647172711768667599, guid: c2fc6970bc57bbe4c8c201b1dee7b232, type: 3}
-  distanciaFlanqueamento: 25
-  distanciaMinima: 10
+  distanciaFlanqueamento: 1000
+  distanciaMinima: 50
   lateralOffset: 15
   suavidadeRotacao: 2
   raioSeparacao: 20
@@ -343,9 +343,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   balaPrefab: {fileID: 7687368674268828979, guid: 461cb342ea3742d44a7cc171bd3e5915, type: 3}
   cannonPoint: {fileID: 8600462417624434851}
-  shootForce: 600
-  cooldownTime: 1
-  attackRange: 150
+  shootForce: 500
+  cooldownTime: 1.8
+  attackRange: 200
   spawnOffset: 3
   congelado: 0
 --- !u!114 &7883753215836495144
@@ -360,7 +360,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d441f18ced1b27489420e33548e9234, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  vida: 1
+  vida: 10
   valueXp: 5
 --- !u!114 &5476589933066810135
 MonoBehaviour:
@@ -376,13 +376,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moedaPrefab: {fileID: 7245727950541225976, guid: 3b7618178e8335346a748277022becba, type: 3}
   minMoedas: 1
-  maxMoedas: 3
+  maxMoedas: 5
   itensPossiveis:
   - {fileID: 1253162247643659479, guid: a7b13d7888b77a84db5c0ed7d051161b, type: 3}
   - {fileID: 2792000550772804565, guid: 21c48b4c33a7d5549b8c501c7b29939c, type: 3}
   - {fileID: 4935901451866062599, guid: 8995390d1a656a645a1fbbc497bb95d8, type: 3}
   - {fileID: 8928841093090810680, guid: d0bbbc8865ce9c641b1e81528bfd937f, type: 3}
-  chanceDropItem: 1
+  chanceDropItem: 0.5
   vfxItemDropPrefab: {fileID: 1193953125369175018, guid: 7d39067bead4bc14aa0b451564aa5198, type: 3}
 --- !u!114 &7947219554878580474
 MonoBehaviour:

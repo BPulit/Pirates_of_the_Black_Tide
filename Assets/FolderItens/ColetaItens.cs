@@ -26,7 +26,7 @@ public string colisionTag;
                 StatusPlayer player = other.gameObject.GetComponent<StatusPlayer>();
                 if (player != null)
                 {
-                    player.Curar(1); // ou a quantidade que você quiser
+                    player.Curar(20); // ou a quantidade que você quiser
                     AudioManager.Instance.TocarSomEfeito(16);
                 }
                 break;

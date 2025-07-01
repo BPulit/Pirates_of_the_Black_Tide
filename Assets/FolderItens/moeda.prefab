@@ -122,7 +122,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a8f36798ac6604419f032ac1729237d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  valor: 2
+  valor: 1
   velocidadeRotacao: 90
   vfxDropPrefab: {fileID: 1943286446490004412, guid: e953460ff16e0a6459684f9b77202b5c, type: 3}
 --- !u!1001 &2333970077531238799

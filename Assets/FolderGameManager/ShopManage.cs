@@ -34,7 +34,7 @@ public class ShopManager : MonoBehaviour
 
     else
     {
-        MensagemUI.instance.MostrarMensagem("Ouro insuficiente para comprar: " + item.nomeItem);
+        MensagemUI.instance.MostrarMensagem("Not enough gold to purchase: " + item.nomeItem);
     }
 }
 

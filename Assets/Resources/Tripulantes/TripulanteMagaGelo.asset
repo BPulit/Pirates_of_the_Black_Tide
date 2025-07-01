@@ -15,7 +15,7 @@ MonoBehaviour:
   nome: The Ice witch
   idUnico: magagelo
   icone: {fileID: 21300000, guid: 767fff97f1457a3438103d7fe9e17409, type: 3}
-  cooldown: 20
-  descricao: 'Freezes the movement of enemies for a period of time. Cooldown: 50s'
+  cooldown: 25
+  descricao: 'Freezes the movement of enemies for a period of time. Cooldown: 25s'
   raio: 450
   duracaoCongelamento: 10

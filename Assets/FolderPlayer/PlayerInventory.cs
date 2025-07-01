@@ -29,7 +29,7 @@ public class PlayerInventory : MonoBehaviour
     public void CurarJogador(int quantidade)
     {
         StatusPlayer.Instance.Curar(quantidade);
-        MensagemUI.instance.MostrarMensagem($"Curado em {quantidade} pontos.");
+        MensagemUI.instance.MostrarMensagem($"Healed by {quantidade} points.");
     }
 
     public void AumentarVelocidade(float valor)
@@ -50,7 +50,7 @@ public class PlayerInventory : MonoBehaviour
     public void AumentarAtaque(int valor)
     {
         StatusPlayer.Instance.ataque += valor;
-        MensagemUI.instance.MostrarMensagem($"Ataque aumentado em {valor}. Novo ataque: {StatusPlayer.Instance.ataque}");
+        MensagemUI.instance.MostrarMensagem($"Base attack increased by {valor}. New base attack: {StatusPlayer.Instance.ataque}");
     }
    private void AtualizarVelasVisuais()
     {

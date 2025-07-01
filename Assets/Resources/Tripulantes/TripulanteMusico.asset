@@ -15,9 +15,9 @@ MonoBehaviour:
   nome: The Musician
   idUnico: musico
   icone: {fileID: 21300000, guid: 17eccbbf3b4e77e44933741d79b17d18, type: 3}
-  cooldown: 50
+  cooldown: 45
   descricao: ' Launches a burst of musical notes capable of hitting enemies on the
-    map; Cooldown: 50s'
+    map; Cooldown: 45s'
   notaPrefab: {fileID: 2153864367380145067, guid: f8e671fffda1a08429a9d9ac33e07a99, type: 3}
   alturaInicial: 16
   tempoPausa: 3

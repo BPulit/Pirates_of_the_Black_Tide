@@ -11,11 +11,13 @@ public class BolaDeCanhao : MonoBehaviour
 
     void Start()
     {
-        if (shooterTag == "Player" && dano == 0)
+        if (shooterTag == "Player")
         {
-            dano = StatusPlayer.Instance.ataque;
+            int nivel = PlayerXpManage.instance.nivel;
+            int baseDano = (nivel - 1) * 2;
+            dano = baseDano + StatusPlayer.Instance.ataque;
+            Debug.Log(dano);
         }
-
         if (shooterObject != null)
         {
             Collider myCollider = GetComponent<Collider>();
@@ -33,13 +35,7 @@ public class BolaDeCanhao : MonoBehaviour
     {
         if (collision.gameObject.CompareTag(shooterTag)) return;
 
-        // Spawn do VFX de explosão na posição de impacto
-        if (vfxExplosaoPrefab != null)
-        {
-            ContactPoint pontoImpacto = collision.contacts[0];
-            GameObject vfx = Instantiate(vfxExplosaoPrefab, pontoImpacto.point, Quaternion.identity);
-            Destroy(vfx, 1f); // destrói o VFX depois de 2 segundos
-        }
+        SpawnExplosao(collision.contacts[0].point);
 
         if (shooterTag == "Player")
         {
@@ -66,5 +62,28 @@ public class BolaDeCanhao : MonoBehaviour
         }
 
         Destroy(gameObject);
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("MinaAquatica"))
+        {
+            // Explode também quando tocar em minas trigger
+            if (vfxExplosaoPrefab != null)
+            {
+                Instantiate(vfxExplosaoPrefab, transform.position, Quaternion.identity);
+            }
+
+            Destroy(gameObject);
+        }
+    }
+
+    private void SpawnExplosao(Vector3 posicao)
+    {
+        if (vfxExplosaoPrefab != null)
+        {
+            GameObject vfx = Instantiate(vfxExplosaoPrefab, posicao, Quaternion.identity);
+            Destroy(vfx, 1f);
+        }
     }
 }

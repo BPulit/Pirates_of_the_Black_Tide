@@ -18,7 +18,7 @@ public class TripulanteBomba : Tripulante
 
         if (inimigos.Length == 0)
         {
-            MensagemUI.instance?.MostrarMensagem("Nenhum inimigo ou boss encontrado para mirar com os mísseis.");
+            MensagemUI.instance?.MostrarMensagem("No enemy or boss found to target with missiles.");
             return;
         }
 

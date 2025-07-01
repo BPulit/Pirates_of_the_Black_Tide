@@ -5,15 +5,18 @@ public class MinaAquatica : MonoBehaviour
     public int dano = 1;
     public GameObject vfxExplosao;
     public float tempoParaDestruirVFX = 2f;
+
     private Vector3 posInicial;
     private float offsetOscilacao;
-    public float amplitude = 0.5f;   // Altura da oscilação
-    public float velocidadeOscilacao = 1f; // Velocidade da oscilação
+    public float amplitude = 0.5f;
+    public float velocidadeOscilacao = 1f;
+
+    [HideInInspector] public MinaSpawner spawnerOrigem; // <- Spawner de origem (setado pelo spawner)
 
     void Start()
     {
         posInicial = transform.position;
-        offsetOscilacao = Random.Range(0f, 10f); // Garante que cada mina flutue diferente
+        offsetOscilacao = Random.Range(0f, 10f);
     }
 
     void Update()
@@ -26,35 +29,29 @@ public class MinaAquatica : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            // Aplica dano no player
             StatusPlayer.Instance.TomarDano(dano);
-
-            // Efeito visual
-            if (vfxExplosao != null)
-            {
-                GameObject vfx = Instantiate(vfxExplosao, transform.position, Quaternion.identity);
-                Destroy(vfx, tempoParaDestruirVFX);
-            }
-
-            // Som de explosão, se quiser
-            AudioManager.Instance?.TocarSomEfeito(8);
-
-            // Destrói a mina
-            Destroy(gameObject);
+            Explodir();
         }
-        if (other.CompareTag("Projectile"))
+        else if (other.CompareTag("Projectile") || other.CompareTag("Raio"))
+        {
+            AudioManager.Instance.TocarSomDirecional(2, transform.position);
+            Explodir();
+        }
+    }
+
+    private void Explodir()
+    {
+        if (vfxExplosao != null)
         {
             GameObject vfx = Instantiate(vfxExplosao, transform.position, Quaternion.identity);
             Destroy(vfx, tempoParaDestruirVFX);
-            AudioManager.Instance.TocarSomDirecional(2, transform.position);
-            Destroy(gameObject);
         }
-        if (other.CompareTag("Raio"))
+
+        if (spawnerOrigem != null)
         {
-            GameObject vfx = Instantiate(vfxExplosao, transform.position, Quaternion.identity);
-            Destroy(vfx, tempoParaDestruirVFX);
-            AudioManager.Instance.TocarSomDirecional(2, transform.position);
-            Destroy(gameObject);
+            spawnerOrigem.NotificarDestruicao(gameObject);
         }
+
+        Destroy(gameObject);
     }
 }

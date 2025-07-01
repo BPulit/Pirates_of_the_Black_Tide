@@ -121,6 +121,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6fa24d10ac454b542bcd8339a9c218e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  duracao: 5
+  duracao: 7
   tempoPiscando: 2
   velocidadePiscar: 5

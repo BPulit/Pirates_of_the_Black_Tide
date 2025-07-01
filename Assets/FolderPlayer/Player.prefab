@@ -5840,7 +5840,7 @@ MonoBehaviour:
   anchorBrake: 2
   tiltAmount: 10
   tiltSmooth: 5
-  repulsionForce: 200
+  repulsionForce: 250
   modoOrbital: 0
   centrosDaArena:
   - {fileID: 0}
@@ -5867,7 +5867,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   balaPrefab: {fileID: 7687368674268828979, guid: 461cb342ea3742d44a7cc171bd3e5915, type: 3}
-  vfxExplosionPrefab: {fileID: 4544093511871096023, guid: d9635d2790730964b9f22b5f7b8bda29, type: 3}
+  vfxExplosionPrefab: {fileID: 8464950693656172981, guid: 83ad694f134ab954580473212156b35a, type: 3}
   leftCannonPoint: {fileID: 554732225961043617}
   rightCannonPoint: {fileID: 5988791837729507137}
   canhoesExtras:
@@ -5928,7 +5928,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nivel: 1
   xpAtual: 0
-  xpParaProximoNivel: 5
+  xpParaProximoNivel: 15
   barraXP: {fileID: 0}
   nivelTexto: {fileID: 0}
 --- !u!114 &1090538073558583831
@@ -5946,7 +5946,7 @@ MonoBehaviour:
   layerInimigo:
     serializedVersion: 2
     m_Bits: 128
-  knockbackForce: 30
+  knockbackForce: 40
   vfxHabilidadeCapitao: {fileID: 5749441552287667129, guid: ee71d8dfb36a7b048aef24b0bc8f9764, type: 3}
 --- !u!1 &6288818280491228123
 GameObject:

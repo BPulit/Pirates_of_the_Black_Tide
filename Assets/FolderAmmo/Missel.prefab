@@ -77,7 +77,7 @@ MonoBehaviour:
   velocidade: 50
   rotacao: 5
   tempoDeVida: 7
-  dano: 4
+  dano: 40
   efeitoExplosao: {fileID: 4544093511871096023, guid: d9635d2790730964b9f22b5f7b8bda29, type: 3}
   efeitoFlame: {fileID: 8400424712307853490, guid: 366377810aaf4fc4ab2be725a54c5712, type: 3}
 --- !u!136 &1766905497465568641

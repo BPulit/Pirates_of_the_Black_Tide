@@ -14671,86 +14671,86 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itensDisponiveis:
-  - nomeItem: "Canh\xF5es Extras"
-    preco: 3
-    descricao: "Desbloqueie 2 novos canh\xF5es!"
+  - nomeItem: Twin Boomers
+    preco: 60
+    descricao: +1 Cannon on each side
     icone: {fileID: 21300000, guid: 9e550a63cadae4442af94ed7032c9fc7, type: 3}
     tipoItem: 3
     quantidadeCura: 0
     aumentoVelocidade: 0
     ataqueBonus: 0
-  - nomeItem: Velas Nivel 1
+  - nomeItem: "Tier 1 \u2013 Tattered Sails"
     preco: 3
-    descricao: xxxxxxxx
+    descricao: +5 Speed
     icone: {fileID: 21300000, guid: 0561d5cda28c5734e8444863fdff6bde, type: 3}
     tipoItem: 1
     quantidadeCura: 0
-    aumentoVelocidade: 2
+    aumentoVelocidade: 5
     ataqueBonus: 0
-  - nomeItem: "Refor\xE7o Nivel 1"
-    preco: 3
-    descricao: yyyyyyyyyyy
+  - nomeItem: "Tier 1 \u2013 Wooden Plating"
+    preco: 10
+    descricao: +10 HP
     icone: {fileID: 21300000, guid: 601e030c5fbb9f744bce55c6ebd9efcb, type: 3}
     tipoItem: 0
-    quantidadeCura: 5
+    quantidadeCura: 10
     aumentoVelocidade: 0
     ataqueBonus: 0
-  - nomeItem: "Muni\xE7\xE3o Nivel 1"
-    preco: 3
-    descricao: zzzzzzzzzz
+  - nomeItem: "Tier 1 \u2013 Packed Shot"
+    preco: 10
+    descricao: +3 Damage
     icone: {fileID: 21300000, guid: edc3a558fb573d54aa1d7ea581d6b7cd, type: 3}
     tipoItem: 2
     quantidadeCura: 0
     aumentoVelocidade: 0
-    ataqueBonus: 2
-  - nomeItem: "Refor\xE7o Nivel 2"
-    preco: 4
-    descricao: yyyyyyyyyyy
+    ataqueBonus: 3
+  - nomeItem: "Tier 2 \u2013 Ironclad Hull"
+    preco: 25
+    descricao: +30 HP
     icone: {fileID: 21300000, guid: 2e043886cd2a4924eb9b33ee2365fefd, type: 3}
     tipoItem: 0
-    quantidadeCura: 50
+    quantidadeCura: 30
     aumentoVelocidade: 0
     ataqueBonus: 0
-  - nomeItem: Vela Nivel 2
-    preco: 3
-    descricao: xxxxxxxxx
+  - nomeItem: "Tier 2 \u2013 Swiftcloth Sails"
+    preco: 25
+    descricao: +5 Speed
     icone: {fileID: 21300000, guid: bd055a3feb59a534495ef88634ab5b51, type: 3}
     tipoItem: 1
     quantidadeCura: 0
-    aumentoVelocidade: 0
+    aumentoVelocidade: 5
     ataqueBonus: 0
-  - nomeItem: "Muni\xE7\xE3o Nivel 2"
-    preco: 4
-    descricao: xxxxx
+  - nomeItem: "Tier 2 \u2013 Piercing Rounds"
+    preco: 25
+    descricao: +5 Damage
     icone: {fileID: 21300000, guid: 02458c560b43da044b328b32e8bfdbea, type: 3}
     tipoItem: 2
     quantidadeCura: 0
     aumentoVelocidade: 0
-    ataqueBonus: 7
-  - nomeItem: "Refor\xE7o Nivel 3"
-    preco: 5
-    descricao: yyyyyyyyyyy
+    ataqueBonus: 5
+  - nomeItem: "Tier 3 \u2013 Leviathan Armor"
+    preco: 35
+    descricao: +60 HP
     icone: {fileID: 21300000, guid: 1a62f7e9dd15bda4ebb2ac68e53e4cd2, type: 3}
     tipoItem: 0
-    quantidadeCura: 100
+    quantidadeCura: 60
     aumentoVelocidade: 0
     ataqueBonus: 0
-  - nomeItem: Vela Nivel 3
-    preco: 5
-    descricao: xxxxxxxxx
+  - nomeItem: "Tier 3 \u2013 Windcaller Sails"
+    preco: 35
+    descricao: +10 Speed
     icone: {fileID: 21300000, guid: d241ffba551bf48488f281487ae80d85, type: 3}
     tipoItem: 1
     quantidadeCura: 0
-    aumentoVelocidade: 7
+    aumentoVelocidade: 10
     ataqueBonus: 0
-  - nomeItem: "Muni\xE7\xE3o Nivel 3"
-    preco: 5
-    descricao: xxxxx
+  - nomeItem: "Tier 3 \u2013 Hellfire Ammo"
+    preco: 35
+    descricao: +15 Damage
     icone: {fileID: 21300000, guid: 8810a802b3878ca4180b861ec9fc15fe, type: 3}
     tipoItem: 2
     quantidadeCura: 0
     aumentoVelocidade: 0
-    ataqueBonus: 10
+    ataqueBonus: 15
   painelItensUI: {fileID: 0}
   prefabUIItem: {fileID: 1870158578961718096, guid: f13bc7dfb6a97e4449bb6a57df71e398, type: 3}
 --- !u!114 &6952420727716902537

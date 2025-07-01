@@ -18,5 +18,5 @@ MonoBehaviour:
   cooldown: 20
   descricao: 'Use two spads to throw a straight X cut. Cooldown: 20s'
   cortePrefab: {fileID: 7158126110218869170, guid: d3375202cd6f1294d8ea6f1d87bad49f, type: 3}
-  velocidadeCorte: 100
-  tempoDestruicao: 10
+  velocidadeCorte: 130
+  tempoDestruicao: 8

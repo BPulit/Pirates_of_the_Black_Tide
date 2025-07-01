@@ -15,8 +15,8 @@ MonoBehaviour:
   nome: The cook
   idUnico: cozinheiro
   icone: {fileID: 21300000, guid: 71d102308acbff747bc257bf7f8ebdf9, type: 3}
-  cooldown: 100
+  cooldown: 70
   descricao: 'It provides food to the crew and the cannon operator and for 1 minute
-    the cooldown time of the other crewmen falls by half. Cooldown: 100s'
+    the cooldown time of the other crewmen falls by half. Cooldown: 70s'
   duracao: 40
   fatorReducao: 0.5

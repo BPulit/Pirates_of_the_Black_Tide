@@ -20,5 +20,5 @@ MonoBehaviour:
     enemies. Cooldown: 60s'
   ondaPrefab: {fileID: 6181012877353925109, guid: 4e92a0451252ed54fb827816444c0c9b, type: 3}
   velocidadeOnda: 80
-  duracaoOnda: 10
-  dano: 6
+  duracaoOnda: 8
+  dano: 15

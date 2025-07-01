@@ -12,9 +12,10 @@ GameObject:
   - component: {fileID: 6472186217262272437}
   - component: {fileID: 3714469373944004661}
   - component: {fileID: -7864685729085933165}
+  - component: {fileID: 5325300929799934034}
   m_Layer: 0
   m_Name: MinaAquatica
-  m_TagString: Untagged
+  m_TagString: MinaAquatica
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -100,6 +101,23 @@ MonoBehaviour:
   tempoParaDestruirVFX: 2
   amplitude: 0.8
   velocidadeOscilacao: 1.4
+  spawnerOrigem: {fileID: 0}
+--- !u!208 &5325300929799934034
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1845203783026345930}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 0
+  m_Extents: {x: 3.76, y: 1, z: 3.76}
+  m_MoveThreshold: 0.1
+  m_Carve: 1
+  m_CarveOnlyStationary: 0
+  m_Center: {x: 0, y: 0, z: 0}
+  m_TimeToStationary: 0.5
 --- !u!1001 &8732020481195786334
 PrefabInstance:
   m_ObjectHideFlags: 0

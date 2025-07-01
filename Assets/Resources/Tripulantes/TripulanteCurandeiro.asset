@@ -15,7 +15,7 @@ MonoBehaviour:
   nome: The doctor
   idUnico: curandeiro
   icone: {fileID: 21300000, guid: 755c8e4ab04027b44bd111d01ed92689, type: 3}
-  cooldown: 120
+  cooldown: 100
   descricao: 'This dedicated doctor uses all his strength to heal his companions
     and provides extra life for the ship but he needs to rest for a long time. Cooldown:
-    120s'
+    100s'
