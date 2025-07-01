@@ -30,17 +30,11 @@ public class CenaManager : MonoBehaviour
                 break;
 
                 case "Derrota":
-                AudioManager.Instance.TocarMusica(5);
-                AudioManager.Instance.TocarSomNaturza(0);
-                AudioManager.Instance.TocarSomNaturza(1);
-                AudioManager.Instance.TocarSomNaturza(2);
+               
                 break;
 
                 case "Vitoria":
-                AudioManager.Instance.TocarMusica(4);
-                AudioManager.Instance.TocarSomNaturza(0);
-                AudioManager.Instance.TocarSomNaturza(1);
-                AudioManager.Instance.TocarSomNaturza(2);
+               
                 break;
 
             default:

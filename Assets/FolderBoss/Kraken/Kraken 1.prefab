@@ -961,7 +961,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ddf34f599c96744a8b93c1ffed1ebcc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  danoTentaculo: 1
+  danoTentaculo: 5
   targetTag: Player
   cooldownDano: 1.5
 --- !u!114 &3814772379205641024
@@ -981,7 +981,7 @@ MonoBehaviour:
   - {fileID: 1077189692620938014}
   - {fileID: 1961053524275548596}
   - {fileID: 7439757789831621002}
-  velocidadeRotacao: 20
+  velocidadeRotacao: 40
   intervaloEntreAtaques: 3
 --- !u!65 &3304054475318442042
 BoxCollider:

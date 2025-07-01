@@ -66,7 +66,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e62cd4f88b183bd4ca33b04e921c06a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dano: 10
+  dano: 20
 --- !u!1 &2604381832645270223
 GameObject:
   m_ObjectHideFlags: 0
@@ -125,6 +125,7 @@ MonoBehaviour:
   animator: {fileID: 592402854773318636}
   spawner: {fileID: 0}
   cameraFollow: {fileID: 0}
+  animControl: {fileID: 0}
 --- !u!114 &8631345991765528861
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -280,7 +281,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e62cd4f88b183bd4ca33b04e921c06a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dano: 15
+  dano: 20
 --- !u!1001 &218555803697235837
 PrefabInstance:
   m_ObjectHideFlags: 0

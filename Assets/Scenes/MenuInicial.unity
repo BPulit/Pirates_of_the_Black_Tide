@@ -7013,7 +7013,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: bc6c7548160d6914fa9fde0f1ae95b5d, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 63ddbe9ae44da3d489bada5f8bd31e16, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -25163,7 +25163,7 @@ AudioSource:
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.599
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -25533,22 +25533,6 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 1bc659bdba3d01445940e8a05997c2ea, type: 3}
   - {fileID: 8300000, guid: c5c804ecefb0b8e47be9090fad29a37e, type: 3}
   - {fileID: 8300000, guid: a743b6e1bced1824e8c058c10bb984c2, type: 3}
-  - {fileID: 8300000, guid: 5bd875276a9b8d2419fad6f7da9d1792, type: 3}
-  - {fileID: 8300000, guid: 729bf5bdbaf9c9542a906d74c7fc64f0, type: 3}
-  - {fileID: 8300000, guid: 73dec55d24b156d4b8e28e2d74afbd09, type: 3}
-  - {fileID: 8300000, guid: 8f06b339d850b304098aa272797cfecb, type: 3}
-  - {fileID: 8300000, guid: 64112c2248037f74aaff238929981dd5, type: 3}
-  - {fileID: 8300000, guid: 10a115f78ab102742a578643702b0433, type: 3}
-  - {fileID: 8300000, guid: ab389088d296ee444a4cbf9674941334, type: 3}
-  - {fileID: 8300000, guid: 1c516aedb020281498033155314e1444, type: 3}
-  - {fileID: 8300000, guid: b455348eeb61c8c49997aa034d090efc, type: 3}
-  - {fileID: 8300000, guid: 95194a30e580ed541bf79d641b19588e, type: 3}
-  - {fileID: 8300000, guid: 0e8109ed0662a74408a756147fd44f1d, type: 3}
-  - {fileID: 8300000, guid: 232289176c94da5428bb345b7308cacd, type: 3}
-  - {fileID: 8300000, guid: 4476f84d97b9d954b8a3f03be19ac312, type: 3}
-  - {fileID: 8300000, guid: d758a4f7a7a630b44ae8a54db0cece22, type: 3}
-  - {fileID: 8300000, guid: cfdd8155fb4055c4aa2322ebfecf1554, type: 3}
-  - {fileID: 8300000, guid: a50f2097223049844af81298700c4487, type: 3}
   - {fileID: 8300000, guid: 97282b611a1df114d8e361ac16fc26dc, type: 3}
   - {fileID: 8300000, guid: f2bb7e0732a9b2e4889c65c843a1e88d, type: 3}
   natureza:
@@ -25667,7 +25651,7 @@ AudioSource:
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.578
   m_Pitch: 1
   Loop: 1
   Mute: 0
